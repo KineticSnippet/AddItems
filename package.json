@@ -1,0 +1,653 @@
+{
+    "name": "newfile",
+    "displayName": "newFile",
+    "description": "Extends `new file...` vscode capabilities",
+    "keywords": [
+        "new file",
+        "create files",
+        "create class"
+    ],
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kineticSnippet/newFile"
+    },
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "author": {
+        "name": "fercho",
+        "url": "https://twitter.com/kineticSnippet",
+        "email": "kineticSnippet@outlook.com"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "newFile.addItem",
+                "title": "Add Item",
+                "category": "new File"
+            },
+            {
+                "command": "newFile.addItemCustom",
+                "title": "Add Item (Custom)",
+                "category": "new File"
+            },
+            {
+                "command": "newFile.openUserTemplates",
+                "title": "Open User Templates",
+                "category": "new File"
+            },
+            {
+                "command": "newFile.restoreUserTemplates",
+                "title": "Restore User Templates",
+                "category": "new File"
+            },
+            {
+                "command": "newFile.deleteUserTemplates",
+                "title": "Delete User Templates",
+                "category": "new File"
+            },
+            {
+                "command": "newFile.countTemplates",
+                "title": "Count Templates",
+                "category": "new File"
+            },
+            {
+                "command": "newFile.showAllCSharp",
+                "title": "Show all"
+            },
+            {
+                "command": "newFile.addCsClass",
+                "title": "Class"
+            },
+            {
+                "command": "newFile.addCsEnum",
+                "title": "Enum"
+            },
+            {
+                "command": "newFile.addCsInterface",
+                "title": "Interface"
+            },
+            {
+                "command": "newFile.addCsStruct",
+                "title": "Struct"
+            },
+            {
+                "command": "newFile.addCsRecord",
+                "title": "Record"
+            },
+            {
+                "command": "newFile.addCsGlobalUsing",
+                "title": "Global Using"
+            },
+            {
+                "command": "newFile.addCsUnitTests",
+                "title": "Unit Tests"
+            },
+            {
+                "command": "newFile.showAllRazor",
+                "title": "Show All"
+            },
+            {
+                "command": "newFile.addCsRazorModel",
+                "title": "Razor Model"
+            },
+            {
+                "command": "newFile.addRazorLayout",
+                "title": "Layout"
+            },
+            {
+                "command": "newFile.addRazorViewStart",
+                "title": "View Start"
+            },
+            {
+                "command": "newFile.addRazorComponent",
+                "title": "Component"
+            },
+            {
+                "command": "newFile.addRazorEmptyPage",
+                "title": "Page"
+            },
+            {
+                "command": "newFile.addRazorPageWithModel",
+                "title": "Page & model"
+            },
+            {
+                "command": "newFile.addRazorPageWithCodeBehind",
+                "title": "Page standalone"
+            },
+            {
+                "command": "newFile.showAllTypescript",
+                "title": "Show all"
+            },
+            {
+                "command": "newFile.addTsIndex",
+                "title": "Index"
+            },
+            {
+                "command": "newFile.addTsFunction",
+                "title": "Function"
+            },
+            {
+                "command": "newFile.addTsClass",
+                "title": "Class"
+            },
+            {
+                "command": "newFile.addTsEnum",
+                "title": "Enum"
+            },
+            {
+                "command": "newFile.addTsInterface",
+                "title": "Interface"
+            },
+            {
+                "command": "newFile.addTsGlobalConst",
+                "title": "Global Constants"
+            },
+            {
+                "command": "newFile.showAllPython",
+                "title": "Show all"
+            },
+            {
+                "command": "newFile.addPyScript",
+                "title": "Script"
+            },
+            {
+                "command": "newFile.addPyMain",
+                "title": "Main"
+            },
+            {
+                "command": "newFile.addPyClass",
+                "title": "Class"
+            },
+            {
+                "command": "newFile.addPyTest",
+                "title": "Test"
+            },
+            {
+                "command": "newFile.addPyGlobalConstant",
+                "title": "Global Constant"
+            },
+            {
+                "command": "newFile.addPyRequirements",
+                "title": "Requirements"
+            },
+            {
+                "command": "newFile.addJson",
+                "title": "Json File"
+            },
+            {
+                "command": "newFile.addXml",
+                "title": "Xml File"
+            }
+        ],
+        "menus": {
+            "file/newFile": [
+                {
+                    "command": "newFile.addItem"
+                },
+                {
+                    "command": "newFile.addItemCustom"
+                }
+            ],
+            "explorer/context": [
+                {
+                    "command": "newFile.addItem",
+                    "group": "0_addItems",
+                    "when": "explorerResourceIsFolder"
+                },
+                {
+                    "command": "newFile.addItemCustom",
+                    "group": "0_addItems",
+                    "when": "explorerResourceIsFolder && newFile.showCustoms"
+                },
+                {
+                    "submenu": "addCSharp",
+                    "group": "0_addItems",
+                    "when": "explorerResourceIsFolder && newFile.showCSharp"
+                },
+                {
+                    "submenu": "addRazor",
+                    "group": "0_addItems",
+                    "when": "explorerResourceIsFolder && newFile.showRazor"
+                },
+                {
+                    "submenu": "addTypeScript",
+                    "group": "0_addItems",
+                    "when": "explorerResourceIsFolder && newFile.showTypescript"
+                },
+                {
+                    "submenu": "addPython",
+                    "group": "0_addItems",
+                    "when": "explorerResourceIsFolder && newFile.showPython"
+                }
+            ],
+            "addCSharp": [
+                {
+                    "group": "00_addCsItems",
+                    "command": "newFile.showAllCSharp"
+                },
+                {
+                    "group": "01_00addCsBasic",
+                    "command": "newFile.addCsClass"
+                },
+                {
+                    "group": "01_00addCsBasic",
+                    "command": "newFile.addCsEnum"
+                },
+                {
+                    "group": "01_00addCsBasic",
+                    "command": "newFile.addCsInterface"
+                },
+                {
+                    "group": "01_00addCsBasic",
+                    "command": "newFile.addCsStruct"
+                },
+                {
+                    "group": "01_00addCsBasic",
+                    "command": "newFile.addCsRecord"
+                },
+                {
+                    "group": "01_02addCsGlobalUsing",
+                    "command": "newFile.addCsGlobalUsing"
+                },
+                {
+                    "group": "02_00addCsTesting",
+                    "command": "newFile.addCsUnitTests"
+                },
+                {
+                    "group": "03_00AddCsWeb",
+                    "command": "newFile.addCsRazorModel"
+                },
+                {
+                    "group": "04_00DataTypes",
+                    "command": "newFile.addJson"
+                },
+                {
+                    "group": "04_00DataTypes",
+                    "command": "newFile.addXml"
+                }
+            ],
+            "addRazor": [
+                {
+                    "group": "00_addRazorItems",
+                    "command": "newFile.showAllRazor"
+                },
+                {
+                    "group": "01_addRazorItems",
+                    "command": "newFile.addRazorLayout"
+                },
+                {
+                    "group": "01_addRazorItems",
+                    "command": "newFile.addRazorViewStart"
+                },
+                {
+                    "group": "01_addRazorItems",
+                    "command": "newFile.addRazorComponent"
+                },
+                {
+                    "group": "02_addRazorItems",
+                    "command": "newFile.addRazorEmptyPage"
+                },
+                {
+                    "group": "02_addRazorItems",
+                    "command": "newFile.addRazorPageWithModel"
+                },
+                {
+                    "group": "02_addRazorItems",
+                    "command": "newFile.addRazorPageWithCodeBehind"
+                }
+            ],
+            "addTypeScript": [
+                {
+                    "group": "00_addTsItems",
+                    "command": "newFile.showAllTypescript"
+                },
+                {
+                    "group": "01_addTsItems",
+                    "command": "newFile.addTsIndex"
+                },
+                {
+                    "group": "01_addTsItems",
+                    "command": "newFile.addTsFunction"
+                },
+                {
+                    "group": "02_addTsItems",
+                    "command": "newFile.addTsClass"
+                },
+                {
+                    "group": "02_addTsItems",
+                    "command": "newFile.addTsEnum"
+                },
+                {
+                    "group": "02_addTsItems",
+                    "command": "newFile.addTsInterface"
+                },
+                {
+                    "group": "03_addTsItems",
+                    "command": "newFile.addTsGlobalConst"
+                },
+                {
+                    "group": "04_00DataTypes",
+                    "command": "newFile.addJson"
+                },
+                {
+                    "group": "04_00DataTypes",
+                    "command": "newFile.addXml"
+                }
+            ],
+            "addPython": [
+                {
+                    "group": "00_addPythonItems",
+                    "command": "newFile.showAllPython"
+                },
+                {
+                    "group": "01_addPythonItems",
+                    "command": "newFile.addPyScript"
+                },
+                {
+                    "group": "01_addPythonItems",
+                    "command": "newFile.addPyMain"
+                },
+                {
+                    "group": "02_addPythonItems",
+                    "command": "newFile.addPyClass"
+                },
+                {
+                    "group": "02_addPythonItems",
+                    "command": "newFile.addPyTest"
+                },
+                {
+                    "group": "02_addPythonItems",
+                    "command": "newFile.addPyGlobalConstant"
+                },
+                {
+                    "group": "03_addPythonItems",
+                    "command": "newFile.addPyRequirements"
+                },
+                {
+                    "group": "04_00DataTypes",
+                    "command": "newFile.addJson"
+                },
+                {
+                    "group": "04_00DataTypes",
+                    "command": "newFile.addXml"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "newFile.showAllCSharp",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addCsClass",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addCsEnum",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addCsInterface",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addCsStruct",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addCsRecord",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addCsGlobalUsing",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addCsUnitTests",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.showAllRazor",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addRazorLayout",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addRazorViewStart",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addRazorComponent",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addRazorEmptyPage",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addRazorPageWithModel",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addRazorPageWithCodeBehind",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addRazorPageWithCodeBehind",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.showAllTypescript",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addTsIndex",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addTsFunction",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addTsClass",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addTsEnum",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addTsInterface",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addTsGlobalConst",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.showAllPython",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addPyScript",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addPyMain",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addPyClass",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addPyTest",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addPyGlobalConstant",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addPyRequirements",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addJson",
+                    "when": "false"
+                },
+                {
+                    "command": "newFile.addXml",
+                    "when": "false"
+                }
+            ]
+        },
+        "keybindings": [
+            {
+                "command": "newFile.addItem",
+                "key": "ctrl+win+/"
+            },
+            {
+                "command": "newFile.addItemCustom",
+                "key": "ctrl+win+\\"
+            }
+        ],
+        "submenus": [
+            {
+                "id": "addCSharp",
+                "label": "Add Items C#"
+            },
+            {
+                "id": "addRazor",
+                "label": "Add Items C# Razor"
+            },
+            {
+                "id": "addTypeScript",
+                "label": "Add Items TypeScript"
+            },
+            {
+                "id": "addPython",
+                "label": "Add Items Python"
+            }
+        ],
+        "configuration": [
+            {
+                "title": "New File",
+                "properties": {
+                    "newFile.contextMenu.custom": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Show Custom context menu shortcut, for custom templates"
+                    },
+                    "newFile.contextMenu.shortcut.CSharp": {
+                        "type": "string",
+                        "enum": [
+                            "Never",
+                            "Always",
+                            "Dynamic"
+                        ],
+                        "enumDescriptions": [
+                            "Shortcuts will never be shown",
+                            "Shortcuts will always be shown",
+                            "Shortcuts will be shown based on the current workspace"
+                        ],
+                        "default": "Dynamic",
+                        "description": "Decide when to show C# context menu shortcut."
+                    },
+                    "newFile.contextMenu.shortcut.Razor": {
+                        "type": "string",
+                        "enum": [
+                            "Never",
+                            "Always",
+                            "Dynamic"
+                        ],
+                        "default": "Dynamic",
+                        "description": "Decide when to show C# Razor context menu shortcut.",
+                        "enumDescriptions": [
+                            "Shortcuts will never be shown",
+                            "Shortcuts will always be shown",
+                            "Shortcuts will be shown based on the current workspace"
+                        ]
+                    },
+                    "newFile.contextMenu.shortcut.Typescript": {
+                        "type": "string",
+                        "enum": [
+                            "Never",
+                            "Always",
+                            "Dynamic"
+                        ],
+                        "default": "Dynamic",
+                        "description": "Decide when to show TypeScript context menu shortcut.",
+                        "enumDescriptions": [
+                            "Shortcuts will never be shown",
+                            "Shortcuts will always be shown",
+                            "Shortcuts will be shown based on the current workspace"
+                        ]
+                    },
+                    "newFile.contextMenu.shortcut.Python": {
+                        "type": "string",
+                        "enum": [
+                            "Never",
+                            "Always",
+                            "Dynamic"
+                        ],
+                        "default": "Dynamic",
+                        "description": "Decide when to show Python context menu shortcut.",
+                        "enumDescriptions": [
+                            "Shortcuts will never be shown",
+                            "Shortcuts will always be shown",
+                            "Shortcuts will be shown based on the current workspace"
+                        ]
+                    },
+                    "newFile.normalizeNamespaces": {
+                        "type": "string",
+                        "default": "None",
+                        "enum": [
+                            "None",
+                            "Remove",
+                            "Replace with underscore"
+                        ],
+                        "enumDescriptions": [
+                            "Do not normalize namespaces",
+                            "Remove namespaces",
+                            "Replace dots with underscores"
+                        ],
+                        "markdownDescription": "Decide what to do with special characters in a namespace. In case you have an invalid folder structure. For example, if you have a folder named `Money$$$`, the dollar signs (`$$$`) are invalid characters for a namespace. This setting will decide what to do with those characters. \n\n**Note**: White spaces will always be removed, regardless of this setting. \n\n**Note**: This setting is temporary disabled. It will be re-enabled in a future release."
+                    }
+                }
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.80.0",
+        "@types/glob": "^8.1.0",
+        "@types/mocha": "^10.0.1",
+        "@types/node": "20.2.5",
+        "@typescript-eslint/eslint-plugin": "^5.59.8",
+        "@typescript-eslint/parser": "^5.59.8",
+        "eslint": "^8.41.0",
+        "glob": "^8.1.0",
+        "mocha": "^10.2.0",
+        "typescript": "^5.1.3",
+        "@vscode/test-electron": "^2.3.2"
+    }
+}
