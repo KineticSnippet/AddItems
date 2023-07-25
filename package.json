@@ -1,13 +1,15 @@
 {
     "name": "newfile",
-    "displayName": "newFile",
+    "displayName": "New File...",
+    "publisher": "kineticSnippet",
     "description": "Extends `new file...` vscode capabilities",
+    "icon": "./Resources/Icons/Icon.png",
     "keywords": [
         "new file",
         "create files",
         "create class"
     ],
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repository": {
         "type": "git",
         "url": "https://github.com/kineticSnippet/newFile"
@@ -20,6 +22,7 @@
         "url": "https://twitter.com/kineticSnippet",
         "email": "kineticSnippet@outlook.com"
     },
+    "license": "MIT",
     "categories": [
         "Programming Languages",
         "Snippets"
