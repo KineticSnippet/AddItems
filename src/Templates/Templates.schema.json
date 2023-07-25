@@ -1,0 +1,98 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "languages": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "extensionName": {
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "type": "boolean"
+                    },
+                    "templates": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "filename": {
+                                    "type": "string"
+                                },
+                                "extensionName": {
+                                    "type": "string"
+                                },
+                                "namespace": {
+                                    "type": "boolean"
+                                },
+                                "siblings": {
+                                    "type": "object",
+                                    "properties": {
+                                        "languageLabel": {
+                                            "type": "string"
+                                        },
+                                        "templateLabel": {
+                                            "type": "string"
+                                        },
+                                        "fromDefaultTemplates": {
+                                            "type": "boolean"
+                                        },
+                                        "parentUri": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "languageLabel",
+                                        "templateLabel",
+                                        "fromDefaultTemplates"
+                                    ],
+                                    "additionalProperties": false
+                                },
+                                "body": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "label",
+                                "description",
+                                "filename",
+                                "body"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "required": [
+                    "label",
+                    "description",
+                    "extensionName",
+                    "namespace",
+                    "templates"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": ["languages"],
+    "additionalProperties": false
+}

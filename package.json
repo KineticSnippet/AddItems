@@ -32,12 +32,12 @@
         "commands": [
             {
                 "command": "newFile.addItem",
-                "title": "Add Item",
+                "title": "New Files...",
                 "category": "new File"
             },
             {
                 "command": "newFile.addItemCustom",
-                "title": "Add Item (Custom)",
+                "title": "New Files... (Custom)",
                 "category": "new File"
             },
             {
@@ -526,19 +526,19 @@
         "submenus": [
             {
                 "id": "addCSharp",
-                "label": "Add Items C#"
+                "label": "New Files... C#"
             },
             {
                 "id": "addRazor",
-                "label": "Add Items C# Razor"
+                "label": "New Files... C# Razor"
             },
             {
                 "id": "addTypeScript",
-                "label": "Add Items TypeScript"
+                "label": "New Files... TypeScript"
             },
             {
                 "id": "addPython",
-                "label": "Add Items Python"
+                "label": "New Files... Python"
             }
         ],
         "configuration": [

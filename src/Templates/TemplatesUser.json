@@ -1,0 +1,30 @@
+{
+    "$schema": "./Templates.schema.json",
+    "languages": [
+        {
+            "label": "Java",
+            "description": "Java is a popular programming language and computing platform.",
+            "extensionName": "java",
+            "namespace": true,
+            "templates": [
+                {
+                    "label": "Class",
+                    "description": "Main java class.",
+                    "filename": "Main",
+                    "body": [
+                        "public class Main {",
+                        "  int x = 5;",
+                        "",
+                        "  public static void main(String[] args) {",
+                        "\tMain myObj1 = new Main();  // Object 1",
+                        "\tMain myObj2 = new Main();  // Object 2",
+                        "\tSystem.out.println(myObj1.x);",
+                        "\tSystem.out.println(myObj2.x);",
+                        "  }",
+                        "}"
+                    ]
+                }
+            ]
+        }
+    ]
+}
