@@ -1,8 +1,8 @@
 {
-    "name": "newfile",
+    "name": "new-file",
     "displayName": "New File...",
     "publisher": "kineticSnippet",
-    "description": "Extends `new file...` vscode capabilities",
+    "description": "Extends \"new file...\" vscode capabilities",
     "icon": "./Resources/Icons/Icon.png",
     "keywords": [
         "new file",
@@ -34,526 +34,526 @@
     "contributes": {
         "commands": [
             {
-                "command": "newFile.addItem",
-                "title": "New Files...",
+                "command": "new-file.addItem",
+                "title": "New File",
                 "category": "new File"
             },
             {
-                "command": "newFile.addItemCustom",
-                "title": "New Files... (Custom)",
+                "command": "new-file.addItemCustom",
+                "title": "New File (Custom)",
                 "category": "new File"
             },
             {
-                "command": "newFile.openUserTemplates",
+                "command": "new-file.openUserTemplates",
                 "title": "Open User Templates",
                 "category": "new File"
             },
             {
-                "command": "newFile.restoreUserTemplates",
+                "command": "new-file.restoreUserTemplates",
                 "title": "Restore User Templates",
                 "category": "new File"
             },
             {
-                "command": "newFile.deleteUserTemplates",
+                "command": "new-file.deleteUserTemplates",
                 "title": "Delete User Templates",
                 "category": "new File"
             },
             {
-                "command": "newFile.countTemplates",
+                "command": "new-file.countTemplates",
                 "title": "Count Templates",
                 "category": "new File"
             },
             {
-                "command": "newFile.showAllCSharp",
+                "command": "new-file.showAllCSharp",
                 "title": "Show all"
             },
             {
-                "command": "newFile.addCsClass",
+                "command": "new-file.addCsClass",
                 "title": "Class"
             },
             {
-                "command": "newFile.addCsEnum",
+                "command": "new-file.addCsEnum",
                 "title": "Enum"
             },
             {
-                "command": "newFile.addCsInterface",
+                "command": "new-file.addCsInterface",
                 "title": "Interface"
             },
             {
-                "command": "newFile.addCsStruct",
+                "command": "new-file.addCsStruct",
                 "title": "Struct"
             },
             {
-                "command": "newFile.addCsRecord",
+                "command": "new-file.addCsRecord",
                 "title": "Record"
             },
             {
-                "command": "newFile.addCsGlobalUsing",
+                "command": "new-file.addCsGlobalUsing",
                 "title": "Global Using"
             },
             {
-                "command": "newFile.addCsUnitTests",
+                "command": "new-file.addCsUnitTests",
                 "title": "Unit Tests"
             },
             {
-                "command": "newFile.showAllRazor",
+                "command": "new-file.showAllRazor",
                 "title": "Show All"
             },
             {
-                "command": "newFile.addCsRazorModel",
+                "command": "new-file.addCsRazorModel",
                 "title": "Razor Model"
             },
             {
-                "command": "newFile.addRazorLayout",
+                "command": "new-file.addRazorLayout",
                 "title": "Layout"
             },
             {
-                "command": "newFile.addRazorViewStart",
+                "command": "new-file.addRazorViewStart",
                 "title": "View Start"
             },
             {
-                "command": "newFile.addRazorComponent",
+                "command": "new-file.addRazorComponent",
                 "title": "Component"
             },
             {
-                "command": "newFile.addRazorEmptyPage",
+                "command": "new-file.addRazorEmptyPage",
                 "title": "Page"
             },
             {
-                "command": "newFile.addRazorPageWithModel",
+                "command": "new-file.addRazorPageWithModel",
                 "title": "Page & model"
             },
             {
-                "command": "newFile.addRazorPageWithCodeBehind",
+                "command": "new-file.addRazorPageWithCodeBehind",
                 "title": "Page standalone"
             },
             {
-                "command": "newFile.showAllTypescript",
+                "command": "new-file.showAllTypescript",
                 "title": "Show all"
             },
             {
-                "command": "newFile.addTsIndex",
+                "command": "new-file.addTsIndex",
                 "title": "Index"
             },
             {
-                "command": "newFile.addTsFunction",
+                "command": "new-file.addTsFunction",
                 "title": "Function"
             },
             {
-                "command": "newFile.addTsClass",
+                "command": "new-file.addTsClass",
                 "title": "Class"
             },
             {
-                "command": "newFile.addTsEnum",
+                "command": "new-file.addTsEnum",
                 "title": "Enum"
             },
             {
-                "command": "newFile.addTsInterface",
+                "command": "new-file.addTsInterface",
                 "title": "Interface"
             },
             {
-                "command": "newFile.addTsGlobalConst",
+                "command": "new-file.addTsGlobalConst",
                 "title": "Global Constants"
             },
             {
-                "command": "newFile.showAllPython",
+                "command": "new-file.showAllPython",
                 "title": "Show all"
             },
             {
-                "command": "newFile.addPyScript",
+                "command": "new-file.addPyScript",
                 "title": "Script"
             },
             {
-                "command": "newFile.addPyMain",
+                "command": "new-file.addPyMain",
                 "title": "Main"
             },
             {
-                "command": "newFile.addPyClass",
+                "command": "new-file.addPyClass",
                 "title": "Class"
             },
             {
-                "command": "newFile.addPyTest",
+                "command": "new-file.addPyTest",
                 "title": "Test"
             },
             {
-                "command": "newFile.addPyGlobalConstant",
+                "command": "new-file.addPyGlobalConstant",
                 "title": "Global Constant"
             },
             {
-                "command": "newFile.addPyRequirements",
+                "command": "new-file.addPyRequirements",
                 "title": "Requirements"
             },
             {
-                "command": "newFile.addJson",
+                "command": "new-file.addJson",
                 "title": "Json File"
             },
             {
-                "command": "newFile.addXml",
+                "command": "new-file.addXml",
                 "title": "Xml File"
             }
         ],
         "menus": {
             "file/newFile": [
                 {
-                    "command": "newFile.addItem"
+                    "command": "new-file.addItem"
                 },
                 {
-                    "command": "newFile.addItemCustom"
+                    "command": "new-file.addItemCustom"
                 }
             ],
             "explorer/context": [
                 {
-                    "command": "newFile.addItem",
+                    "command": "new-file.addItem",
                     "group": "0_addItems",
                     "when": "explorerResourceIsFolder"
                 },
                 {
-                    "command": "newFile.addItemCustom",
+                    "command": "new-file.addItemCustom",
                     "group": "0_addItems",
-                    "when": "explorerResourceIsFolder && newFile.showCustoms"
+                    "when": "explorerResourceIsFolder && new-file.showCustoms"
                 },
                 {
                     "submenu": "addCSharp",
                     "group": "0_addItems",
-                    "when": "explorerResourceIsFolder && newFile.showCSharp"
+                    "when": "explorerResourceIsFolder && new-file.showCSharp"
                 },
                 {
                     "submenu": "addRazor",
                     "group": "0_addItems",
-                    "when": "explorerResourceIsFolder && newFile.showRazor"
+                    "when": "explorerResourceIsFolder && new-file.showRazor"
                 },
                 {
                     "submenu": "addTypeScript",
                     "group": "0_addItems",
-                    "when": "explorerResourceIsFolder && newFile.showTypescript"
+                    "when": "explorerResourceIsFolder && new-file.showTypescript"
                 },
                 {
                     "submenu": "addPython",
                     "group": "0_addItems",
-                    "when": "explorerResourceIsFolder && newFile.showPython"
+                    "when": "explorerResourceIsFolder && new-file.showPython"
                 }
             ],
             "addCSharp": [
                 {
                     "group": "00_addCsItems",
-                    "command": "newFile.showAllCSharp"
+                    "command": "new-file.showAllCSharp"
                 },
                 {
                     "group": "01_00addCsBasic",
-                    "command": "newFile.addCsClass"
+                    "command": "new-file.addCsClass"
                 },
                 {
                     "group": "01_00addCsBasic",
-                    "command": "newFile.addCsEnum"
+                    "command": "new-file.addCsEnum"
                 },
                 {
                     "group": "01_00addCsBasic",
-                    "command": "newFile.addCsInterface"
+                    "command": "new-file.addCsInterface"
                 },
                 {
                     "group": "01_00addCsBasic",
-                    "command": "newFile.addCsStruct"
+                    "command": "new-file.addCsStruct"
                 },
                 {
                     "group": "01_00addCsBasic",
-                    "command": "newFile.addCsRecord"
+                    "command": "new-file.addCsRecord"
                 },
                 {
                     "group": "01_02addCsGlobalUsing",
-                    "command": "newFile.addCsGlobalUsing"
+                    "command": "new-file.addCsGlobalUsing"
                 },
                 {
                     "group": "02_00addCsTesting",
-                    "command": "newFile.addCsUnitTests"
+                    "command": "new-file.addCsUnitTests"
                 },
                 {
                     "group": "03_00AddCsWeb",
-                    "command": "newFile.addCsRazorModel"
+                    "command": "new-file.addCsRazorModel"
                 },
                 {
                     "group": "04_00DataTypes",
-                    "command": "newFile.addJson"
+                    "command": "new-file.addJson"
                 },
                 {
                     "group": "04_00DataTypes",
-                    "command": "newFile.addXml"
+                    "command": "new-file.addXml"
                 }
             ],
             "addRazor": [
                 {
                     "group": "00_addRazorItems",
-                    "command": "newFile.showAllRazor"
+                    "command": "new-file.showAllRazor"
                 },
                 {
                     "group": "01_addRazorItems",
-                    "command": "newFile.addRazorLayout"
+                    "command": "new-file.addRazorLayout"
                 },
                 {
                     "group": "01_addRazorItems",
-                    "command": "newFile.addRazorViewStart"
+                    "command": "new-file.addRazorViewStart"
                 },
                 {
                     "group": "01_addRazorItems",
-                    "command": "newFile.addRazorComponent"
+                    "command": "new-file.addRazorComponent"
                 },
                 {
                     "group": "02_addRazorItems",
-                    "command": "newFile.addRazorEmptyPage"
+                    "command": "new-file.addRazorEmptyPage"
                 },
                 {
                     "group": "02_addRazorItems",
-                    "command": "newFile.addRazorPageWithModel"
+                    "command": "new-file.addRazorPageWithModel"
                 },
                 {
                     "group": "02_addRazorItems",
-                    "command": "newFile.addRazorPageWithCodeBehind"
+                    "command": "new-file.addRazorPageWithCodeBehind"
                 }
             ],
             "addTypeScript": [
                 {
                     "group": "00_addTsItems",
-                    "command": "newFile.showAllTypescript"
+                    "command": "new-file.showAllTypescript"
                 },
                 {
                     "group": "01_addTsItems",
-                    "command": "newFile.addTsIndex"
+                    "command": "new-file.addTsIndex"
                 },
                 {
                     "group": "01_addTsItems",
-                    "command": "newFile.addTsFunction"
+                    "command": "new-file.addTsFunction"
                 },
                 {
                     "group": "02_addTsItems",
-                    "command": "newFile.addTsClass"
+                    "command": "new-file.addTsClass"
                 },
                 {
                     "group": "02_addTsItems",
-                    "command": "newFile.addTsEnum"
+                    "command": "new-file.addTsEnum"
                 },
                 {
                     "group": "02_addTsItems",
-                    "command": "newFile.addTsInterface"
+                    "command": "new-file.addTsInterface"
                 },
                 {
                     "group": "03_addTsItems",
-                    "command": "newFile.addTsGlobalConst"
+                    "command": "new-file.addTsGlobalConst"
                 },
                 {
                     "group": "04_00DataTypes",
-                    "command": "newFile.addJson"
+                    "command": "new-file.addJson"
                 },
                 {
                     "group": "04_00DataTypes",
-                    "command": "newFile.addXml"
+                    "command": "new-file.addXml"
                 }
             ],
             "addPython": [
                 {
                     "group": "00_addPythonItems",
-                    "command": "newFile.showAllPython"
+                    "command": "new-file.showAllPython"
                 },
                 {
                     "group": "01_addPythonItems",
-                    "command": "newFile.addPyScript"
+                    "command": "new-file.addPyScript"
                 },
                 {
                     "group": "01_addPythonItems",
-                    "command": "newFile.addPyMain"
+                    "command": "new-file.addPyMain"
                 },
                 {
                     "group": "02_addPythonItems",
-                    "command": "newFile.addPyClass"
+                    "command": "new-file.addPyClass"
                 },
                 {
                     "group": "02_addPythonItems",
-                    "command": "newFile.addPyTest"
+                    "command": "new-file.addPyTest"
                 },
                 {
                     "group": "02_addPythonItems",
-                    "command": "newFile.addPyGlobalConstant"
+                    "command": "new-file.addPyGlobalConstant"
                 },
                 {
                     "group": "03_addPythonItems",
-                    "command": "newFile.addPyRequirements"
+                    "command": "new-file.addPyRequirements"
                 },
                 {
                     "group": "04_00DataTypes",
-                    "command": "newFile.addJson"
+                    "command": "new-file.addJson"
                 },
                 {
                     "group": "04_00DataTypes",
-                    "command": "newFile.addXml"
+                    "command": "new-file.addXml"
                 }
             ],
             "commandPalette": [
                 {
-                    "command": "newFile.showAllCSharp",
+                    "command": "new-file.showAllCSharp",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addCsClass",
+                    "command": "new-file.addCsClass",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addCsEnum",
+                    "command": "new-file.addCsEnum",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addCsInterface",
+                    "command": "new-file.addCsInterface",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addCsStruct",
+                    "command": "new-file.addCsStruct",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addCsRecord",
+                    "command": "new-file.addCsRecord",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addCsGlobalUsing",
+                    "command": "new-file.addCsGlobalUsing",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addCsUnitTests",
+                    "command": "new-file.addCsUnitTests",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.showAllRazor",
+                    "command": "new-file.showAllRazor",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addRazorLayout",
+                    "command": "new-file.addRazorLayout",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addRazorViewStart",
+                    "command": "new-file.addRazorViewStart",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addRazorComponent",
+                    "command": "new-file.addRazorComponent",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addRazorEmptyPage",
+                    "command": "new-file.addRazorEmptyPage",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addRazorPageWithModel",
+                    "command": "new-file.addRazorPageWithModel",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addRazorPageWithCodeBehind",
+                    "command": "new-file.addRazorPageWithCodeBehind",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addRazorPageWithCodeBehind",
+                    "command": "new-file.addRazorPageWithCodeBehind",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.showAllTypescript",
+                    "command": "new-file.showAllTypescript",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addTsIndex",
+                    "command": "new-file.addTsIndex",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addTsFunction",
+                    "command": "new-file.addTsFunction",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addTsClass",
+                    "command": "new-file.addTsClass",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addTsEnum",
+                    "command": "new-file.addTsEnum",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addTsInterface",
+                    "command": "new-file.addTsInterface",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addTsGlobalConst",
+                    "command": "new-file.addTsGlobalConst",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.showAllPython",
+                    "command": "new-file.showAllPython",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addPyScript",
+                    "command": "new-file.addPyScript",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addPyMain",
+                    "command": "new-file.addPyMain",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addPyClass",
+                    "command": "new-file.addPyClass",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addPyTest",
+                    "command": "new-file.addPyTest",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addPyGlobalConstant",
+                    "command": "new-file.addPyGlobalConstant",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addPyRequirements",
+                    "command": "new-file.addPyRequirements",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addJson",
+                    "command": "new-file.addJson",
                     "when": "false"
                 },
                 {
-                    "command": "newFile.addXml",
+                    "command": "new-file.addXml",
                     "when": "false"
                 }
             ]
         },
         "keybindings": [
             {
-                "command": "newFile.addItem",
+                "command": "new-file.addItem",
                 "key": "ctrl+win+/"
             },
             {
-                "command": "newFile.addItemCustom",
+                "command": "new-file.addItemCustom",
                 "key": "ctrl+win+\\"
             }
         ],
         "submenus": [
             {
                 "id": "addCSharp",
-                "label": "New Files... C#"
+                "label": "New File C#"
             },
             {
                 "id": "addRazor",
-                "label": "New Files... C# Razor"
+                "label": "New File Razor"
             },
             {
                 "id": "addTypeScript",
-                "label": "New Files... TypeScript"
+                "label": "New File TypeScript"
             },
             {
                 "id": "addPython",
-                "label": "New Files... Python"
+                "label": "New File Python"
             }
         ],
         "configuration": [
             {
                 "title": "New File",
                 "properties": {
-                    "newFile.contextMenu.custom": {
+                    "new-file.contextMenu.custom": {
                         "type": "boolean",
                         "default": false,
                         "description": "Show Custom context menu shortcut, for custom templates"
                     },
-                    "newFile.contextMenu.shortcut.CSharp": {
+                    "new-file.contextMenu.shortcut.CSharp": {
                         "type": "string",
                         "enum": [
                             "Never",
@@ -568,7 +568,7 @@
                         "default": "Dynamic",
                         "description": "Decide when to show C# context menu shortcut."
                     },
-                    "newFile.contextMenu.shortcut.Razor": {
+                    "new-file.contextMenu.shortcut.Razor": {
                         "type": "string",
                         "enum": [
                             "Never",
@@ -583,7 +583,7 @@
                             "Shortcuts will be shown based on the current workspace"
                         ]
                     },
-                    "newFile.contextMenu.shortcut.Typescript": {
+                    "new-file.contextMenu.shortcut.Typescript": {
                         "type": "string",
                         "enum": [
                             "Never",
@@ -598,7 +598,7 @@
                             "Shortcuts will be shown based on the current workspace"
                         ]
                     },
-                    "newFile.contextMenu.shortcut.Python": {
+                    "new-file.contextMenu.shortcut.Python": {
                         "type": "string",
                         "enum": [
                             "Never",
@@ -613,7 +613,7 @@
                             "Shortcuts will be shown based on the current workspace"
                         ]
                     },
-                    "newFile.normalizeNamespaces": {
+                    "new-file.normalizeNamespaces": {
                         "type": "string",
                         "default": "None",
                         "enum": [

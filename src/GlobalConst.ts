@@ -2,7 +2,7 @@
  * Defines the extension's id, name and configuration name.
  */
 export const enum Extension {
-    id = "newFile", // The extension's unique identifier
+    id = "new-file", // The extension's unique identifier
     name = "New File", // The extension's display name
 }
 
