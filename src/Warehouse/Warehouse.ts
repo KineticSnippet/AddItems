@@ -96,8 +96,14 @@ export class Warehouse {
         await this.writeValidator();
         const templatesUserExists = Warehouse.fileExists(this.templatesUser);
         if (templatesUserExists) {
+            lumberjack.logInfo(
+                `The file ${this.templatesUser} is now being open`
+            );
             await vscode.window.showTextDocument(this.templatesUser);
         } else {
+            lumberjack.logInfo(
+                `The file ${this.templatesUser} does not exist, asking the user to create one`
+            );
             const confirm = await this.askToConfirm(
                 "Do you want to create user templates file?"
             );

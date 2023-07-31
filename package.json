@@ -12,17 +12,17 @@
     "version": "0.1.1",
     "repository": {
         "type": "git",
-        "url": "https://github.com/kineticSnippet/newFile"
+        "url": "https://github.com/kineticSnippet/NewFileHelp"
     },
     "engines": {
         "vscode": "^1.80.0"
     },
     "author": {
-        "name": "fercho",
+        "name": "kineticSnippet",
         "url": "https://twitter.com/kineticSnippet",
         "email": "kineticSnippet@outlook.com"
     },
-    "license": "MIT",
+    "license": "Private",
     "categories": [
         "Programming Languages",
         "Snippets"
