@@ -31,29 +31,30 @@ export class FilesWatcher {
         let tsFound = false;
         let pythonFound = false;
         uriArray.some((uri) => {
-            if (uri.fsPath.endsWith(".cs")) {
+            if (uri.fsPath.endsWith(".cs") || uri.path.endsWith("csproj")) {
                 csFound = true;
             }
             return csFound;
         });
         uriArray.some((uri) => {
-            if (uri.fsPath.endsWith(".cshtml")) {
-                razorFound = true;
-            }
-            return razorFound;
-        });
-        uriArray.some((uri) => {
-            if (uri.fsPath.endsWith(".ts")) {
+            if (
+                uri.fsPath.endsWith(".ts") ||
+                uri.path.endsWith("tsconfig.json")
+            ) {
                 tsFound = true;
             }
             return tsFound;
         });
         uriArray.some((uri) => {
-            if (uri.fsPath.endsWith(".py")) {
+            if (
+                uri.fsPath.endsWith(".py") ||
+                uri.path.toLowerCase().endsWith("requirements.txt")
+            ) {
                 pythonFound = true;
             }
             return pythonFound;
         });
+
         if (csFound && cs === ContextShowOptions.dynamic) {
             configMgr.showCSharpCtx();
         } else if (!csFound && cs === ContextShowOptions.dynamic) {

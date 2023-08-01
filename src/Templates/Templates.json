@@ -413,7 +413,7 @@
                 {
                     "label": "Requirements",
                     "description": "A file that contains the dependencies of your application.",
-                    "filename": "Requirements",
+                    "filename": "requirements",
                     "extensionName": "txt",
                     "body": [
                         "# Requirements.txt",
@@ -708,6 +708,40 @@
                         "export const ${1:CONSTANT_NAME} = ${2:constantValue};",
                         "",
                         "$0"
+                    ]
+                },
+                {
+                    "label": "Compiler options",
+                    "description": "A set of strict compiler options.",
+                    "filename": "tsconfig",
+                    "extensionName": "json",
+                    "namespace": false,
+                    "body": [
+                        "{",
+                        "\t\"compilerOptions\": {",
+                        "\t\t\"module\": \"commonjs\",",
+                        "\t\t\"target\": \"ES2020\",",
+                        "\t\t\"outDir\": \"out\",",
+                        "\t\t\"lib\": [\"ES2020\"],",
+                        "\t\t\"sourceMap\": true,",
+                        "\t\t\"rootDir\": \"src\",",
+                        "\t\t\"strict\": true ,",
+                        "\t\t\"noImplicitReturns\": true,",
+                        "\t\t\"noFallthroughCasesInSwitch\": true,",
+                        "\t\t\"noUnusedParameters\": true,",
+                        "\t\t\"moduleResolution\": \"node\",",
+                        "\t\t\"resolveJsonModule\": true,",
+                        "\t\t\"esModuleInterop\": true,",
+                        "\t\t\"noUnusedLocals\": true,",
+                        "\t\t\"noImplicitAny\": true,",
+                        "\t\t\"strictNullChecks\": true,",
+                        "\t\t\"noEmitOnError\": true,",
+                        "\t\t\"alwaysStrict\": true,",
+                        "\t\t\"noImplicitThis\": true,",
+                        "\t\t\"noImplicitOverride\": true,",
+                        "\t}",
+                        "}",
+                        ""
                     ]
                 }
             ]

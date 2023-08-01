@@ -37,6 +37,8 @@ export const excludePatterns = [
     "**/.svn/**",
     "**/CVS/**",
     "**/.vscode/**",
+    // python venvs
+    "**/.venv/**",
 ];
 
 /**
