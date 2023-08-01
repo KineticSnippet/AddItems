@@ -2,7 +2,7 @@
 
 Create files using both the command palette or the context menu, not just files, but classes, scripts, enums, and all short of templates.
 
-![show](/Resources/ctx.gif)
+![show](/Resources/Readme/Ctx.gif)
 
 >**NOTE** Context menus are automatically show only for: C#, Python, TypeScript and Razor Pages.
 
@@ -21,7 +21,7 @@ Enable this feature in "Settings": "Context menu: Custom" and set it to true.
 
 ## C# extension
 
-If you are a C# developer, you may be interested in [this extension](https://github.com/kineticSnippet/DotnetToolsHelp)
+If you are a C# developer, you may be interested in [this extension](https://github.com/kineticSnippet/DotnetTools)
 
 ## Credits
 
