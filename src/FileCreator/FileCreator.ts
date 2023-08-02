@@ -6,21 +6,25 @@ import {
 } from "./FileCreatorHelper";
 import path from "path";
 import { lumberjack, warehouse } from "../extension";
-import TemplateParser, { Language, Template } from "../Templates/TemplateParser";
+import TemplateParser, {
+    Language,
+    Template,
+} from "../Templates/TemplateParser";
 import { Extension } from "../GlobalConst";
+import * as vscode from "vscode";
 
 /**
  * The `FileCreator` class provides functionality for creating new files in a specified destination folder.
  */
 export class FileCreator {
-/**
- * Creates a new file in the specified destination folder using the provided file kind and template.
- * If no file kind or template is provided, the default file kind and available templates will be used.
- * @param destinationFolder The folder where the new file will be created.
- * @param solicitedFile An optional object containing the language and template labels for the new file.
- * @param item An optional file kind to use for the new file.
- * @returns A Promise that resolves when the new file has been created.
- */
+    /**
+     * Creates a new file in the specified destination folder using the provided file kind and template.
+     * If no file kind or template is provided, the default file kind and available templates will be used.
+     * @param destinationFolder The folder where the new file will be created.
+     * @param solicitedFile An optional object containing the language and template labels for the new file.
+     * @param item An optional file kind to use for the new file.
+     * @returns A Promise that resolves when the new file has been created.
+     */
     static async createItem(
         destinationFolder: Uri,
         solicitedFile?: SolicitedFile,
@@ -30,10 +34,29 @@ export class FileCreator {
         if (item === undefined) {
             item = FileKind.default;
         }
+        const wsFolders = vscode.workspace.workspaceFolders;
+        if (wsFolders === undefined) {
+            throw new Error(`No workspace folders found!`);
+        }
         try {
+            // If the destination folder is undefined, allow the user to select a folder
             destinationFolder = await FileCreatorHelper.selectWorkspaceFolder(
                 destinationFolder
             );
+            // All the workspace folders as uris
+            const wsFoldersUris = wsFolders.map((folder) => folder.uri);
+            // Separate the root folder from the destination folder
+            const rootFolder = FileCreatorHelper.getRootFolder(
+                destinationFolder,
+                wsFoldersUris
+            );
+
+            // Remove the rootFolder from the destination folder path
+            const localPath =
+                destinationFolder.fsPath.replace(rootFolder, "") + path.sep;
+            lumberjack.logFileCreatorInfo(`Local path: ${localPath}`);
+
+            // Templates stuff
             let templates: Language[];
             if (item === FileKind.default) {
                 templates = await TemplateParser.getTemplates();
@@ -49,6 +72,7 @@ export class FileCreator {
                 throw new Error(`No templates found!`);
             }
 
+            // Language and template selection
             let userSelectedLanguage: Language;
             if (solicitedFile?.languageLabel === undefined) {
                 lumberjack.logFileCreatorInfo(
@@ -106,9 +130,11 @@ export class FileCreator {
                 }
             }
 
+            // File name selection
             const fileName = await FileCreatorHelper.selectFileName(
                 userSelectedTemplate,
-                userSelectedLanguage
+                userSelectedLanguage,
+                localPath
             );
             lumberjack.logFileCreatorInfo(`File name selected: ${fileName}`);
 
@@ -119,7 +145,7 @@ export class FileCreator {
 
             lumberjack.logFileCreatorInfo(`Now it's our turn. 😎`);
             let destFolder = FileCreatorHelper.extractPath(
-                destinationFolder.fsPath,
+                rootFolder,
                 fileName
             );
             lumberjack.logFileCreatorInfo(`Destination folder: ${destFolder}`);
@@ -161,10 +187,10 @@ export class FileCreator {
             }
         } catch (error) {
             if (error instanceof Error) {
-                if (error.message === `Cancelled by user`) {
+                if (error.message === cancelByUser) {
                     lumberjack.logFileCreatorError(`Cancelled by user.`);
-                }
-                if (error.message === `User templates are not valid`) {
+                    lumberjack.logFileCreatorInfo(error.stack!);
+                } else if (error.message === `User templates are not valid`) {
                     lumberjack.logFileCreatorError(error.message);
                     lumberjack.logFileCreatorError(
                         `User templates are not valid, please make sure they follow the correct format.`
@@ -203,3 +229,5 @@ export class FileCreator {
 }
 
 export default FileCreator;
+
+export const cancelByUser = `Cancelled by user`;

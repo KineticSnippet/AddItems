@@ -465,6 +465,16 @@ export class Commands {
                 });
             }
         );
+        const addTsCompilerOptionsCmd = commands.registerCommand(
+            TsCommandNames.addTsCompilerOptions,
+            (clicker: Uri) => {
+                lumberjack.logCommand(TsCommandNames.addTsCompilerOptions);
+                FileCreator.createItem(clicker, {
+                    languageLabel: "TypeScript",
+                    templateLabel: "Compiler Options",
+                });
+            }
+        );
         /**
          * Registers a command to add a Python item.
          * @param clicker The Uri of the file that triggered the command.
@@ -594,6 +604,7 @@ export class Commands {
             addTsEnumCmd,
             addTsInterfaceCmd,
             addTsGlobalConstCmd,
+            addTsCompilerOptionsCmd,
             addPyAllCmd,
             addPyScriptCmd,
             addPyClassCmd,

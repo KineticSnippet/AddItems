@@ -109,7 +109,7 @@ However many changes were made in this version, and they are listed below:
 - Fixed `record` template file.
 - Removed unnecessary comments.
 
-## [0.3.2] - 10.07.2023 
+## [0.3.2] - 10.07.2023
 
 - Fixed a template file for `CSharp` files: `globalUsings`
 

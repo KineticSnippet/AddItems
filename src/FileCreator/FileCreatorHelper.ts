@@ -3,11 +3,25 @@ import { SnippetString, Uri, window, workspace } from "vscode";
 import { NormalizationOptions, regex } from "../GlobalConst";
 import { configMgr, lumberjack } from "../extension";
 import { Language, Template } from "../Templates/TemplateParser";
+import { cancelByUser } from "./FileCreator";
 
 /**
  * A helper class for creating files in a workspace folder.
  */
 export class FileCreatorHelper {
+    static getRootFolder(destinationFolder: Uri, wsFoldersUris: Uri[]) {
+        let rootFolder = "";
+        const desFolder = destinationFolder.fsPath + path.sep;
+        wsFoldersUris.forEach((folder) => {
+            const folderPath = folder.fsPath + path.sep;
+            if (desFolder.startsWith(folderPath)) {
+                rootFolder = folderPath;
+            }
+        });
+        // remove the trailing path separator
+        rootFolder = rootFolder.slice(0, -1);
+        return rootFolder;
+    }
     /**
      * Prompts the user to select a workspace folder from the currently open workspace folders.
      * If there is only one folder open, it will be automatically selected.
@@ -28,7 +42,7 @@ export class FileCreatorHelper {
                     placeHolder: `Select the destination folder for your new item`,
                 });
                 if (selectedFolder === undefined) {
-                    throw new Error("No folder selected!");
+                    throw new Error(cancelByUser);
                 }
                 return selectedFolder.uri;
             }
@@ -72,7 +86,7 @@ export class FileCreatorHelper {
             (lang) => lang.label === userLanguage?.label
         );
         if (selectedLanguage === undefined) {
-            throw new Error("Cancelled by user");
+            throw new Error(cancelByUser);
         }
         return selectedLanguage;
     }
@@ -115,7 +129,7 @@ export class FileCreatorHelper {
             (template) => template.label === userTemplate?.label
         );
         if (selectedTemplate === undefined) {
-            throw new Error("No template selected!");
+            throw new Error(cancelByUser);
         }
         return selectedTemplate;
     }
@@ -128,8 +142,10 @@ export class FileCreatorHelper {
      */
     static async selectFileName(
         userTemplate: Template,
-        userLanguage: Language
+        userLanguage: Language,
+        location: string
     ): Promise<string> {
+        // Prepare the file extension
         let ext =
             userTemplate.extensionName === undefined
                 ? userLanguage.extensionName
@@ -141,11 +157,21 @@ export class FileCreatorHelper {
             ext = "." + ext;
         }
 
+        // Remove the path separator from the beginning of the location string
+        if (location.startsWith(path.sep)) {
+            location = location.slice(1);
+        }
+
+        // Get the start and end indices of the filename in the location string
+        const startIndex = location.length;
+        const endIndex = location.length + userTemplate.filename.length;
+
+        // Allow user to enter a fancy name for their new file
         const fileName = await window.showInputBox({
             prompt: "Please enter a fancy name for your new file",
             ignoreFocusOut: true,
-            value: userTemplate.filename + ext,
-            valueSelection: [0, userTemplate.filename.length],
+            value: location + userTemplate.filename + ext,
+            valueSelection: [startIndex, endIndex],
             validateInput: (input) => {
                 if (input === undefined) {
                     return "No file name entered!";
@@ -157,7 +183,7 @@ export class FileCreatorHelper {
             },
         });
         if (fileName === undefined) {
-            throw new Error("Cancelled by user");
+            throw new Error(cancelByUser);
         }
         // regex to remove multiple periods
         return fileName;

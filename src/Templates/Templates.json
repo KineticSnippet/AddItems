@@ -281,10 +281,10 @@
                         "",
                         "class $TM_FILENAME_BASE:",
                         "\t\"\"\"",
-                        "\t$TM_FILENAME",
+                        "\t$TM_FILENAME_BASE",
                         "\t\"\"\"",
                         "\tdef __init__(self):",
-                        "\t\t$0"
+                        "\t\t${1:pass}"
                     ]
                 },
                 {
@@ -296,7 +296,7 @@
                         "",
                         "class $TM_FILENAME_BASE(unittest.TestCase):",
                         "\tdef setUp(self):",
-                        "\t\t$0",
+                        "\t\t${1:pass}",
                         "",
                         "\tdef test_sample(self):",
                         "\t\t\"\"\"",
@@ -364,11 +364,10 @@
                         "Use this file to define constant values used throughout your project.",
                         "\"\"\"",
                         "",
-                        "PI = 3.14",
+                        "E = 2.718281828459",
                         "",
-                        "def get_pi():",
-                        "\treturn PI",
-                        "",
+                        "def get_e():",
+                        "\treturn E",
                         "$0"
                     ]
                 },
@@ -417,7 +416,7 @@
                     "extensionName": "txt",
                     "body": [
                         "# Requirements.txt",
-                        "",
+                        "$0",
                         "# Data Science Packages",
                         "numpy",
                         "pandas",
@@ -620,7 +619,7 @@
                         " * $TM_FILENAME_BASE",
                         " */",
                         "export class $TM_FILENAME_BASE {",
-                        "\tconstructor(${3:params}) {",
+                        "\tconstructor() {",
                         "\t\t$0",
                         "\t}",
                         "}"
@@ -635,7 +634,7 @@
                         " * $TM_FILENAME_BASE: Description of the ${1:EnumName}.",
                         " */",
                         "export interface ${1:InterfaceName} {",
-                        "\t${2:propertyName}: ${3:propertyType};",
+                        "\t${2:propertyName}: ${3:string};",
                         "\t$0",
                         "}"
                     ]
@@ -649,8 +648,8 @@
                         " * $TM_FILENAME_BASE: Description of the ${1:EnumName}.",
                         " */",
                         "export enum ${1:EnumName} {",
-                        "\t${2:CONSTANT_NAME} = ${3:constantValue},",
-                        "\t$0",
+                        "\t${2:Value1},",
+                        "\t${3:Value2},",
                         "}"
                     ]
                 },
@@ -677,10 +676,8 @@
                     "body": [
                         "/**",
                         " * $TM_FILENAME_BASE: Description of the function.",
-                        " *",
-                        " * @param ${2:paramName} paramDescription",
                         " */",
-                        "export function ${1:functionName}(${2:paramName}: ${3:paramType}){",
+                        "export function ${1:functionName}(){",
                         "\t$0",
                         "}"
                     ]
@@ -705,19 +702,21 @@
                         " * Use this file to define constant values used throughout your project.",
                         " */",
                         "",
-                        "export const ${1:CONSTANT_NAME} = ${2:constantValue};",
-                        "",
+                        "export const ${1:SpeedOfLightMs} = ${2:299792458};",
+                        "export const ${3:PI} = ${4:3.141592653589};",
+                        "export const ${5:E} = ${6:2.718281828459};",
                         "$0"
                     ]
                 },
                 {
-                    "label": "Compiler options",
+                    "label": "Compiler Options",
                     "description": "A set of strict compiler options.",
                     "filename": "tsconfig",
                     "extensionName": "json",
                     "namespace": false,
                     "body": [
                         "{",
+                        "\t// Strict compiler options.",
                         "\t\"compilerOptions\": {",
                         "\t\t\"module\": \"commonjs\",",
                         "\t\t\"target\": \"ES2020\",",

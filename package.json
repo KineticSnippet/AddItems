@@ -59,11 +59,6 @@
                 "category": "Add Items"
             },
             {
-                "command": "add-items.countTemplates",
-                "title": "Count Templates",
-                "category": "Add Items"
-            },
-            {
                 "command": "add-items.showAllCSharp",
                 "title": "Show all"
             },
@@ -154,6 +149,10 @@
             {
                 "command": "add-items.addTsGlobalConst",
                 "title": "Global Constants"
+            },
+            {
+                "command": "add-items.addTsCompilerOptions",
+                "title": "Compiler Options"
             },
             {
                 "command": "add-items.showAllPython",
@@ -339,6 +338,10 @@
                     "command": "add-items.addTsGlobalConst"
                 },
                 {
+                    "group": "03_addTsItems",
+                    "command": "add-items.addTsCompilerOptions"
+                },
+                {
                     "group": "04_00DataTypes",
                     "command": "add-items.addJson"
                 },
@@ -476,6 +479,10 @@
                 },
                 {
                     "command": "add-items.addTsGlobalConst",
+                    "when": "false"
+                },
+                {
+                    "command": "add-items.addTsCompilerOptions",
                     "when": "false"
                 },
                 {

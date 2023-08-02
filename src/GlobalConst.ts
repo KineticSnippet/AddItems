@@ -152,6 +152,7 @@ export enum RazorCommandNames {
  * They are not available through the command palette
  * And are called by the essential commands
  */
+
 export enum TsCommandNames {
     addTsAll = `${Extension.id}.showAllTypescript`,
     addTsIndex = `${Extension.id}.addTsIndex`,
@@ -160,6 +161,7 @@ export enum TsCommandNames {
     addTsEnum = `${Extension.id}.addTsEnum`,
     addTsInterface = `${Extension.id}.addTsInterface`,
     addTsGlobalConst = `${Extension.id}.addTsGlobalConst`,
+    addTsCompilerOptions = `${Extension.id}.addTsCompilerOptions`,
 }
 
 /**
