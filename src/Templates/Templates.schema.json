@@ -51,7 +51,7 @@
                                         "templateLabel": {
                                             "type": "string"
                                         },
-                                        "fromDefaultTemplates": {
+                                        "overrideName": {
                                             "type": "boolean"
                                         },
                                         "parentUri": {
@@ -60,8 +60,7 @@
                                     },
                                     "required": [
                                         "languageLabel",
-                                        "templateLabel",
-                                        "fromDefaultTemplates"
+                                        "templateLabel"
                                     ],
                                     "additionalProperties": false
                                 },

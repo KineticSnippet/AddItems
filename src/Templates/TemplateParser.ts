@@ -65,6 +65,6 @@ export interface Template {
 export interface Sibling {
     languageLabel: string; // the language label, e.g. C#
     templateLabel: string; // the template label, e.g. Class
-    defaultTemplate: boolean; // whether the sibling template is a default template, or a user template
+    overrideName?: boolean; // whether the sibling template is a default template, or a user template
     parentUri?: string; // the uri of the parent file, e.g. file:///c%3A/Users/username/Documents/Project/Class.cs
 }

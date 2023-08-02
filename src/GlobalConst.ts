@@ -4,6 +4,7 @@
 export const enum Extension {
     id = "add-items", // The extension's unique identifier
     name = "Add Items", // The extension's display name
+    publisher = `kineticSnippet`, // The extension's publisher
 }
 
 /**new file
@@ -14,6 +15,8 @@ export const regex = {
         /^(?!\s*$)[a-zA-Z0-9\s./\\_-]*\.[a-zA-Z0-9\s./\\_-]+(?<!\.)$/, // Validates file names
     multiSepRegex: /(\/{2,}|\\{2,})/gm, // Matches multiple slashes or backslashes
     namespacePattern: /(\[namespace\])/gm, // Matches the [namespace] placeholder
+    // Matches the [sponsor] placeholder
+    sponsorPattern: /(\[sponsor\])/gm,
     // Matches all invalid characters in a namespace, except for slashes and backslashes
     namespaceValidator: /[^a-zA-Z0-9\/\\]/gm,
 };

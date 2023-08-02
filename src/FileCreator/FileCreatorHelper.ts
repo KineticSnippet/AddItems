@@ -1,6 +1,6 @@
 import path from "path";
 import { SnippetString, Uri, window, workspace } from "vscode";
-import { NormalizationOptions, regex } from "../GlobalConst";
+import { Extension, NormalizationOptions, regex } from "../GlobalConst";
 import { configMgr, lumberjack } from "../extension";
 import { Language, Template } from "../Templates/TemplateParser";
 import { cancelByUser } from "./FileCreator";
@@ -241,8 +241,13 @@ export class FileCreatorHelper {
         namespaceString: string
     ): SnippetString {
         const bodyString = this.convertStringArrayToString(body);
-        const snippetString = this.placeNamespace(bodyString, namespaceString);
+        let snippetString = this.placeNamespace(bodyString, namespaceString);
+        snippetString = this.placeSponsor(snippetString);
         return new SnippetString(snippetString);
+    }
+    static placeSponsor(snippetString: string): string {
+        const sponsor = `\n$LINE_COMMENT This file was created by ${Extension.publisher}.${Extension.id} vscode extension. https://github.com/kineticSnippet/AddItems`;
+        return snippetString.replace(regex.sponsorPattern, sponsor);
     }
     /**
      * Creates a namespace directory string from a given target path.
@@ -395,23 +400,12 @@ export class FileCreatorHelper {
             fileExists = await FileCreatorHelper.checkFileExists(filePath);
         }
         lumberjack.logInfo(`Creating file: ${filePath}`);
-        await workspace.fs
-            .writeFile(Uri.file(filePath), new Uint8Array(Buffer.from(``)))
-            .then(() => {
-                workspace
-                    .openTextDocument(Uri.file(filePath))
-                    .then((document) => {
-                        // save the document
-                        document.save();
-                        // insert the snippet
-                        window.showTextDocument(document).then(() => {
-                            window.activeTextEditor?.insertSnippet(snippet);
-                        });
-                        lumberjack.logFileCreatorSuccess(
-                            `File created: ${filePath}`
-                        );
-                    });
-            });
+        await workspace.fs.writeFile(
+            Uri.file(filePath),
+            new Uint8Array(Buffer.from(``))
+        );
+        let doc = await window.showTextDocument(Uri.file(filePath));
+        doc.insertSnippet(snippet);
         return filePath;
     }
     /**
@@ -447,9 +441,14 @@ export class FileCreatorHelper {
                 // the parent path is the path of the file that was just created
                 let siblingPath = path.dirname(parentPath);
                 // the the name of the file that was just created, without the extension
-                let siblingBaseName = path
-                    .basename(parentPath) // remove the extension
-                    .replace(path.extname(parentPath), "");
+                let siblingBaseName = "";
+                if (userSelectedTemplate.siblings?.overrideName === true) {
+                    siblingBaseName = siblingTemplate.filename;
+                } else {
+                    siblingBaseName = path
+                        .basename(parentPath) // remove the extension
+                        .replace(path.extname(parentPath), "");
+                }
                 // the extension of the sibling file
                 let siblingFileExtension = siblingTemplate.extensionName
                     ? siblingTemplate.extensionName
@@ -458,10 +457,16 @@ export class FileCreatorHelper {
                     siblingFileExtension = path.extname(parentPath);
                 }
                 // the full path of the sibling file
-                const siblingFilePath = path.join(
+                let additionalPath = "";
+                if (userSelectedTemplate.siblings?.parentUri !== undefined) {
+                    additionalPath = userSelectedTemplate.siblings.parentUri;
+                }
+                let siblingFilePath = path.join(
                     siblingPath,
+                    additionalPath,
                     siblingBaseName + `.` + siblingFileExtension
                 );
+                siblingFilePath = path.normalize(siblingFilePath);
                 lumberjack.logFileCreatorInfo(
                     `Creating snippet for sibling file: ${siblingTemplate.label}`
                 );
