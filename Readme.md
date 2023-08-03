@@ -29,6 +29,15 @@ Enable this feature in "Settings": "Context menu: Custom" and set it to true.
 
 If you are a C# developer, you may be interested in [this extension](https://github.com/kineticSnippet/DotnetTools)
 
+---
+
+## Localization
+
+This extension is localized in the following languages:
+
+- English (default, built-in)
+- Russian (built-in, partial)
+
 ## Credits
 
 Extension icon: [yoteyo](https://www.flaticon.com/authors/yoteyo)

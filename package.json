@@ -1,6 +1,6 @@
 {
     "name": "add-items",
-    "displayName": "Add items",
+    "displayName": "Add Items",
     "publisher": "kineticSnippet",
     "description": "Extends \"new file...\" vscode capabilities",
     "icon": "./Resources/Icons/Icon.png",
@@ -9,7 +9,7 @@
         "create file",
         "create class"
     ],
-    "version": "1.2.0",
+    "version": "1.4.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/kineticSnippet/AddItems"
@@ -35,28 +35,32 @@
         "commands": [
             {
                 "command": "add-items.addItem",
-                "title": "Add Item",
-                "category": "Add Items"
+                "title": "%extension.commands.addItem.title%",
+                "category": "%extension.name%",
+                "icon": {
+                    "light": "./Resources/Icons/Icon.png",
+                    "dark": "./Resources/Icons/Icon.png"
+                }
             },
             {
                 "command": "add-items.addItemCustom",
-                "title": "Add Item (Custom)",
-                "category": "Add Items"
+                "title": "%extension.commands.addItemCustom.title%",
+                "category": "%extension.name%"
             },
             {
                 "command": "add-items.openUserTemplates",
-                "title": "Open User Templates",
-                "category": "Add Items"
+                "title": "%extension.commands.openUserTemplates.title%",
+                "category": "%extension.name%"
             },
             {
                 "command": "add-items.restoreUserTemplates",
-                "title": "Restore User Templates",
-                "category": "Add Items"
+                "title": "%extension.commands.restoreUserTemplates.title%",
+                "category": "%extension.name%"
             },
             {
                 "command": "add-items.deleteUserTemplates",
-                "title": "Delete User Templates",
-                "category": "Add Items"
+                "title": "%extension.commands.deleteUserTemplates.title%",
+                "category": "%extension.name%"
             },
             {
                 "command": "add-items.showAllCSharp",
@@ -203,32 +207,32 @@
             "explorer/context": [
                 {
                     "command": "add-items.addItem",
-                    "group": "0_addItems",
+                    "group": "0_0addItems",
                     "when": "explorerResourceIsFolder"
                 },
                 {
                     "command": "add-items.addItemCustom",
-                    "group": "0_addItems",
+                    "group": "0_0addItems",
                     "when": "explorerResourceIsFolder && add-items.showCustoms"
                 },
                 {
                     "submenu": "addCSharp",
-                    "group": "0_addItems",
+                    "group": "0_0addItems",
                     "when": "explorerResourceIsFolder && add-items.showCSharp"
                 },
                 {
                     "submenu": "addRazor",
-                    "group": "0_addItems",
+                    "group": "0_0addItems",
                     "when": "explorerResourceIsFolder && add-items.showRazor"
                 },
                 {
                     "submenu": "addTypeScript",
-                    "group": "0_addItems",
+                    "group": "0_0addItems",
                     "when": "explorerResourceIsFolder && add-items.showTypescript"
                 },
                 {
                     "submenu": "addPython",
-                    "group": "0_addItems",
+                    "group": "0_0addItems",
                     "when": "explorerResourceIsFolder && add-items.showPython"
                 }
             ],
@@ -536,19 +540,19 @@
         "submenus": [
             {
                 "id": "addCSharp",
-                "label": "Add Items C#"
+                "label": "%ctx.addCSharp%"
             },
             {
                 "id": "addRazor",
-                "label": "Add Items Razor"
+                "label": "%ctx.addRazor%"
             },
             {
                 "id": "addTypeScript",
-                "label": "Add Items TypeScript"
+                "label": "%ctx.addTypeScript%"
             },
             {
                 "id": "addPython",
-                "label": "Add Items Python"
+                "label": "%ctx.addPython%"
             }
         ],
         "configuration": [

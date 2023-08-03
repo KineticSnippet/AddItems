@@ -1,0 +1,13 @@
+{
+    "extension.name": "Добавить элементы",
+    "extension.commands.addItem.title": "Добавить элемент",
+    "extension.commands.addItemCustom.title": "Добавить элемент (Пользовательский)",
+    "extension.commands.openUserTemplates.title": "Открыть пользовательские шаблоны",
+    "extension.commands.restoreUserTemplates.title": "Восстановление пользовательских шаблонов",
+    "extension.commands.deleteUserTemplates.title": "Удалить пользовательские шаблоны",
+
+    "ctx.addCSharp": "Добавить элементы C#",
+    "ctx.addRazor": "Добавить элементы Razor",
+    "ctx.addTypeScript": "Добавить элементы TypeScript",
+    "ctx.addPython": "Добавить элементы Python"
+}

@@ -2,7 +2,20 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
-## [1.0.1] - 01.08.2021
+## [1.4.0] - 03.08.2023
+
+🇷🇺
+
+- Расширение переведено на Язык: Русский. 🇷🇺
+- Extension translated to Language: Russian. 🇷🇺
+
+## [1.2.0] - 02.08.2023
+
+- Modified the file name input box to be a bit more user friendly.
+- Fixed some python and typescript templates.
+- Added context menu entries for `tsconfig.json` (Compiler Options) for TypeScript, and a sibling request for a `Index.ts` template, in a `/src` folder.
+
+## [1.0.1] - 01.08.2023
 
 - Added automatic detection of `tsconfig.json` files to show the context menu, for TypeScript.
 - Added automatic detection of `.csproj` files to show the context menu, for C#.
@@ -12,7 +25,7 @@ All notable changes to the `add-items` extension will be documented in this file
 - Fixed name from `Requirements.txt` to `requirements.txt` in the Python template.
 - Added "**/.venv/**" to the exclude patterns for context menu detection.
 
-## [1.0.0] - 31.07.2021
+## [1.0.0] - 31.07.2023
 
 - This is the first stable release of Add-Items.
 - Namespaces normalizations are now available, disabled by default.

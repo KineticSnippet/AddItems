@@ -1,0 +1,13 @@
+{
+    "extension.name": "Add Items",
+    "extension.commands.addItem.title": "Add Item",
+    "extension.commands.addItemCustom.title": "Add Item (Custom)",
+    "extension.commands.openUserTemplates.title": "Open User Templates",
+    "extension.commands.restoreUserTemplates.title": "Restore User Templates",
+    "extension.commands.deleteUserTemplates.title": "Delete User Templates",
+
+    "ctx.addCSharp": "Add Items C#",
+    "ctx.addRazor": "Add Items Razor",
+    "ctx.addTypeScript": "Add Items TypeScript",
+    "ctx.addPython": "Add Items Python"
+}
