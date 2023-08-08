@@ -4,7 +4,7 @@
         {
             "label": "C#",
             "extensionName": ".cs",
-            "description": "Powerful, flexible, and modern programming language.",
+            "description": "Powerful, flexible and modern programming language.",
             "namespace": true,
             "templates": [
                 {
@@ -482,7 +482,7 @@
         {
             "label": "C# (Legacy)",
             "extensionName": ".cs",
-            "description": "High-performance, object-oriented, strongly typed language for the .NET platform.",
+            "description": "High-performance, object-oriented and strongly typed language for the .NET platform.",
             "namespace": true,
             "templates": [
                 {
@@ -886,7 +886,7 @@
         {
             "label": "C++",
             "extensionName": ".cpp",
-            "description": "Robust, old school, and low-level, c++ is fast, efficient, and portable.",
+            "description": "Robust, old school and low-level, c++ is fast, efficient, and portable.",
             "namespace": true,
             "templates": [
                 {
