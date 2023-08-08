@@ -454,10 +454,6 @@
                     "when": "false"
                 },
                 {
-                    "command": "add-items.addRazorPageWithCodeBehind",
-                    "when": "false"
-                },
-                {
                     "command": "add-items.showAllTypescript",
                     "when": "false"
                 },
