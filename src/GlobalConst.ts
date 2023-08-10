@@ -19,6 +19,8 @@ export const regex = {
     sponsorPattern: /(\[sponsor\])/gm,
     // Matches all invalid characters in a namespace, except for slashes and backslashes
     namespaceValidator: /[^a-zA-Z0-9\/\\]/gm,
+    // Path separator regex
+    pathSepRegex: /\/|\\/gm,
 };
 
 /**

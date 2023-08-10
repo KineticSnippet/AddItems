@@ -315,14 +315,14 @@ export class FileCreatorHelper {
     private static dirToNamespace(dir: string): string {
         dir = path.normalize(dir); // normalize the path
         dir = dir.replace(/\s/g, ""); // remove all whitespace
-        if (dir.startsWith(`\\` || `/`)) {
+        if (dir.startsWith(`\\`) || dir.startsWith(`/`)) {
             dir = dir.slice(1); // remove the first character if it is a path separator
         }
-        if (dir.endsWith(`\\` || `/`)) {
+        if (dir.endsWith(`\\`) || dir.endsWith(`/`)) {
             dir = dir.slice(0, -1); // remove the last character if it is a path separator
         }
         dir = this.normalizePath(dir);
-        dir = dir.replace(/\/|\\/g, ".");
+        dir = dir.replace(regex.pathSepRegex, ".");
         return dir;
     }
     private static normalizePath(path: string): string {
