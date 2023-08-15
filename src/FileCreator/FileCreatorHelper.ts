@@ -445,9 +445,10 @@ export class FileCreatorHelper {
                 if (userSelectedTemplate.siblings?.overrideName === true) {
                     siblingBaseName = siblingTemplate.filename;
                 } else {
-                    siblingBaseName = path
-                        .basename(parentPath) // remove the extension
-                        .replace(path.extname(parentPath), "");
+                    siblingBaseName = path.basename(parentPath); // remove the extension
+                    // Remove the extension from the siblingBaseName
+                    let currentExt = path.extname(siblingBaseName);
+                    siblingBaseName = siblingBaseName.split(currentExt)[0];
                 }
                 // the extension of the sibling file
                 let siblingFileExtension = siblingTemplate.extensionName

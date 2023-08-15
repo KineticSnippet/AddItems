@@ -156,6 +156,7 @@
                     "label": "Razor model",
                     "description": "Razor model and code behind in separate files",
                     "filename": "Model",
+                    "extensionName": "cshtml.cs",
                     "body": [
                         "using Microsoft.AspNetCore.Mvc.RazorPages;",
                         "",
