@@ -2,6 +2,19 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
+## [1.4.3] - 14.08.2023
+
+- Fixed: sibling file creation were created with the wrong file extension.
+
+## [1.4.2] - 10.08.2023
+
+- Fixed: Namespace Normalizer was not working properly on linux and macos.
+
+## [1.4.1] - 07.08.2023
+
+- Removed duplicated commands from the package.json file.
+- Updated templates(description) for some languages.
+
 ## [1.4.0] - 03.08.2023
 
 🇷🇺
