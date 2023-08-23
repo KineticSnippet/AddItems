@@ -2,6 +2,10 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
+## [1.5.0] - 22.08.2023
+
+- Fixed Razor template (and code behind): the `namespace` was being created the old way.
+
 ## [1.4.3] - 14.08.2023
 
 - Fixed: sibling file creation were created with the wrong file extension.

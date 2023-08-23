@@ -160,13 +160,13 @@
                     "body": [
                         "using Microsoft.AspNetCore.Mvc.RazorPages;",
                         "",
-                        "namespace [namespace]",
+                        "namespace [namespace];",
+                        "",
+                        "public class ${TM_FILENAME_BASE/(.cshtml)//g}Model : PageModel",
                         "{",
-                        "    public class ${TM_FILENAME_BASE/(.cshtml)//g}Model : PageModel",
+                        "    public void OnGet()",
                         "    {",
-                        "        public void OnGet()",
-                        "        {",
-                        "        }",
+                        "        $0",
                         "    }",
                         "}"
                     ],
@@ -845,8 +845,7 @@
                     "body": [
                         "@page",
                         "@model [namespace].${TM_FILENAME_BASE}Model",
-                        "@{",
-                        "}"
+                        "$0"
                     ],
                     "siblings": {
                         "languageLabel": "C#",
