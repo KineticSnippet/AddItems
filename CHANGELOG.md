@@ -2,11 +2,14 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
-## [2.0.0] - 2023-08-22 - In progress
+## [2.0.0] - 2023-08-22
 
 - Change license from MIT to GPLv3
   - To keep the open source code, open.
 - Added contributions guidelines (basic).
+- Added basic support for spanish.
+
+I'm (@kineticSnippet) happy to announce this extension will be publish to [open-vsx](https://open-vsx.org/).
 
 ## [1.5.0] - 2023-08-22
 
