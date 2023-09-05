@@ -22,7 +22,7 @@
         "url": "https://twitter.com/kineticSnippet",
         "email": "kineticSnippet@outlook.com"
     },
-    "license": "MIT",
+    "license": "LGPL-3.0-only",
     "categories": [
         "Programming Languages",
         "Snippets"
