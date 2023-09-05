@@ -2,37 +2,46 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
-## [1.5.0] - 22.08.2023
+## [2.0.0] - 2023-08-22
+
+- Change license from MIT to GPLv3
+  - To keep the open source code, open.
+- Added contributions guidelines (basic).
+- Added basic support for spanish.
+
+I'm (@kineticSnippet) happy to announce this extension will be publish to [open-vsx](https://open-vsx.org/).
+
+## [1.5.0] - 2023-08-22
 
 - Fixed Razor template (and code behind): the `namespace` was being created the old way.
 
-## [1.4.3] - 14.08.2023
+## [1.4.3] - 2023-08-14
 
 - Fixed: sibling file creation were created with the wrong file extension.
 
-## [1.4.2] - 10.08.2023
+## [1.4.2] - 2023-08-10
 
 - Fixed: Namespace Normalizer was not working properly on linux and macos.
 
-## [1.4.1] - 07.08.2023
+## [1.4.1] - 2023-08-07
 
 - Removed duplicated commands from the package.json file.
 - Updated templates(description) for some languages.
 
-## [1.4.0] - 03.08.2023
+## [1.4.0] - 2023-08-03
 
 🇷🇺
 
 - Расширение переведено на Язык: Русский. 🇷🇺
 - Extension translated to Language: Russian. 🇷🇺
 
-## [1.2.0] - 02.08.2023
+## [1.2.0] - 2023-08-02
 
 - Modified the file name input box to be a bit more user friendly.
 - Fixed some python and typescript templates.
 - Added context menu entries for `tsconfig.json` (Compiler Options) for TypeScript, and a sibling request for a `Index.ts` template, in a `/src` folder.
 
-## [1.0.1] - 01.08.2023
+## [1.0.1] - 2023-08-01
 
 - Added automatic detection of `tsconfig.json` files to show the context menu, for TypeScript.
 - Added automatic detection of `.csproj` files to show the context menu, for C#.
@@ -42,18 +51,12 @@ All notable changes to the `add-items` extension will be documented in this file
 - Fixed name from `Requirements.txt` to `requirements.txt` in the Python template.
 - Added "**/.venv/**" to the exclude patterns for context menu detection.
 
-## [1.0.0] - 31.07.2023
+## [1.0.0] - 2023-07-31
 
 - This is the first stable release of Add-Items.
 - Namespaces normalizations are now available, disabled by default.
 
----
-
-This part of the changelog was created by the previous maintainer. Dates were changed to match the new date format (dd.mm.yyyy) (ru).
-
----
-
-## [0.11.0] - 17.07.2023
+## [0.11.0] - 2023-07-17
 
 - Finished re-writing the extension.
   - The extension is now more scalable.
@@ -61,12 +64,12 @@ This part of the changelog was created by the previous maintainer. Dates were ch
   - Fixed some templates.
   - Removed old tutorial.
 
-## [0.10.2] - 16.07.2023
+## [0.10.2] - 2023-07-16
 
 - Reduced startup time:
   - The extension now starts in about 19ms, instead of 40ms [0.10.0]
 
-## [0.10.0] - 15.07.2023
+## [0.10.0] - 2023-07-15
 
 This version is a major update, and it's not backwards compatible with the previous versions.
 Introduce breaking changes for many features.
@@ -87,7 +90,7 @@ Introduce breaking changes for many features.
  User templates:
  Only if I receive a lot of requests, I will re-introduce this feature, but for now, it's not supported anymore.
 
-## [0.6.0] - 13.07.2023 # [This ver was never released]
+## [0.6.0] - 2023-07-13 # [This ver was never released]
 
 This version was never released, was used for testing purposes only.
 However many changes were made in this version, and they are listed below:
@@ -101,14 +104,14 @@ However many changes were made in this version, and they are listed below:
 - Enabled some strict-ish rules in the `tsconfig.json` file
 - Improved the logging system
 
-## [0.5.0] - 12.07.2023
+## [0.5.0] - 2023-07-12
 
 - Disabled Namespace Normalizer temporarily, because it's not working properly.
 - Shortcuts are now dynamic by default.
   - They are now activated/deactivated based on the current workspace.
   - They can be disabled or enabled statically in the configuration.
 
-## [0.4.0] - 11.07.2023
+## [0.4.0] - 2023-07-11
 
 - Added commands for `Python` and `Typescript` files creation.
   - Added context menu entries for both `Python` and `Typescript` files.
@@ -122,7 +125,7 @@ However many changes were made in this version, and they are listed below:
   - Replaced all the path separators with the `path.sep` constant, to avoid this bug.
 - Error messages are now show to the user in a error notification, with a `Show Log` button, that opens the log channel.
 
-## [0.3.4] - 11.07.2023
+## [0.3.4] - 2023-07-11
 
 - Changed all the strings in the Configuration Manager to constants, for better scalability.
 - Changed all the commands names to constants, for better scalability.
@@ -139,7 +142,7 @@ However many changes were made in this version, and they are listed below:
 - Fixed `record` template file.
 - Removed unnecessary comments.
 
-## [0.3.2] - 10.07.2023
+## [0.3.2] - 2023-07-10
 
 - Fixed a template file for `CSharp` files: `globalUsings`
 
@@ -150,60 +153,71 @@ However many changes were made in this version, and they are listed below:
 - Fixed a bug where the command `showAll` wasn't working at all
 - Added a small label to each entry in the command palette, for better readability, the label shows the file extension of the template
 
-## [0.2.8] - 07.07.2023
+## [0.2.8] - 2023-07-07
 
 - Fixed a bug where the configuration manager is not working properly.
   - The configuration manager reads the wrong configuration entry.
 - Changed default configuration
   - The default configuration for the Namespace Normalizer is now set to `Do nothing`.
 
-## [0.2.6] - 02.07.2023
+## [0.2.6] - 2023-07-02
 
 - Changed Readme
 - Enabled preview in marketplace
 - Modified the tutorial
 
-## [0.2.4] - 01.07.2023
+## [0.2.4] - 2023-07-01
 
 - Fixed a bug where all the javascript files are being created with wrong file extension.
 - Added index.ts (typescript) to the templates.
   - Simple typescript file with a console.log() in it.
 
-## [0.2.2] - 30.06.2023
+## [0.2.2] - 2023-06-30
 
 - Added keywords to package.json
 
-## [0.2.0] - 29.06.2023
+## [0.2.0] - 2023-06-29
 
 - Added a new feature: Normalizing namespaces
   - This feature will normalize the namespaces, replacing special characters with underscores or removing them.
   - This feature can be enabled/disabled in the settings.
 
-## [0.1.4] - 27.06.2023
+## [0.1.4] - 2023-06-27
 
 - Fixed context menu for Razor files
 - Removed unnecessary properties from package.json
 - Removed uncompleted features from vscode settings
 
-## [0.1.2] - 26.06.2023
+## [0.1.2] - 2023-06-26
 
 - Updated README.md
   - Added a more visible link to the tutorial
 - Updated tutorial: Make it more clear
 - Fixed: wrong link to the tutorial in the log console
 
-## [0.1.1] - 26.06.2023
+## [0.1.1] - 2023-06-26
 
 - Fixed a bug where the user can create a file with an empty file extension, which causes errors in the operating system.
 
-## [0.1.0] - 26.06.2023
+## [0.1.0] - 2023-06-26
 
 Updated README.md
 
-## [0.0.1] - 26.06.2023
+## [0.0.1] - 2023-06-26
 
 - Initial release of Add-Items
 
 ## [Unreleased]
 
 - This extension is still unreleased!
+
+---
+
+## Notes
+
+The date format is: YYYY-MM-DD
+
+## Licensing
+
+In order to keep open source code open, this project uses GPL-3 license.  
+This license change is to ensure all modifications are always shared with the community.

@@ -41,3 +41,9 @@ This extension is localized in the following languages:
 ## Credits
 
 Extension icon: [yoteyo](https://www.flaticon.com/authors/yoteyo)
+
+## Contributions
+
+All contributions are welcome!
+
+Make sure to read the [contributions guidelines](/Contributions.md) before.

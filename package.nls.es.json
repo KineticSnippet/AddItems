@@ -1,0 +1,13 @@
+{
+    "extension.name": "Agregar Archivos",
+    "extension.commands.addItem.title": "Agregar archivo",
+    "extension.commands.addItemCustom.title": "Agregar archivo (Personalizado)",
+    "extension.commands.openUserTemplates.title": "Abrir plantillas del usuario",
+    "extension.commands.restoreUserTemplates.title": "Restaurar plantillas del usuario",
+    "extension.commands.deleteUserTemplates.title": "Eliminar plantillas del usuario",
+
+    "ctx.addCSharp": "Agregar archivos C#",
+    "ctx.addRazor": "Agregar archivos Razor",
+    "ctx.addTypeScript": "Agregar archivos TypeScript",
+    "ctx.addPython": "Agregar archivos Python"
+}
