@@ -224,7 +224,7 @@
                     "extensionName": "yaml"
                 },
                 {
-                    "label": "People Json",
+                    "label": "People",
                     "description": "A file containing a list of people.",
                     "filename": "People",
                     "extensionName": "json",
@@ -244,7 +244,7 @@
                     ]
                 },
                 {
-                    "label": "People Xml",
+                    "label": "People",
                     "description": "A file containing a list of people.",
                     "filename": "People",
                     "extensionName": "xml",
