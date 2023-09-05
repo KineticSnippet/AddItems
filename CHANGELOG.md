@@ -2,6 +2,17 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
+## [2.1.0] - 2023-09-05 - In progress
+
+- Adding unity templates (For game development, not the DE)
+  - Adding templates
+  - Adding context menu
+- Minor changes on readme and Contributions.md
+
+## [2.0.1] - 2023-09-05
+
+- Fixed unchanged license on package.json
+
 ## [2.0.0] - 2023-08-22
 
 - Change license from MIT to GPLv3
