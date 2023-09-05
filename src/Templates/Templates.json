@@ -997,6 +997,91 @@
                     ]
                 }
             ]
+        },
+        {
+            "label": "Unity",
+            "description": "Items for game dev with Unity and C#",
+            "extensionName": "cs",
+            "namespace": true,
+            "templates": [
+                {
+                    "label": "Class",
+                    "description": "A standard Unity Class",
+                    "filename": "Class",
+                    "body": [
+                        "using System.Collections;",
+                        "using System.Collections.Generic;",
+                        "using UnityEngine;",
+                        "",
+                        "public class $TM_FILENAME_BASE : MonoBehaviour",
+                        "{",
+                        "    void Start()",
+                        "    {",
+                        "        $0",
+                        "    }",
+                        "",
+                        "    void Update()",
+                        "    {",
+                        "        // This is updated every frame",
+                        "    }",
+                        "",
+                        "    void FixedUpdate()",
+                        "    {",
+                        "        // This is updated when the physics engine updates",
+                        "    }",
+                        "}",
+                        ""
+                    ]
+                },
+                {
+                    "label": "Namespaced Class",
+                    "description": "A unity class within a namespace",
+                    "filename": "Class",
+                    "body": [
+                        "using System.Collections;",
+                        "using System.Collections.Generic;",
+                        "using UnityEngine;",
+                        "",
+                        "namespace [namespace]",
+                        "{",
+                        "\tpublic class $TM_FILENAME_BASE : MonoBehaviour",
+                        "\t{",
+                        "\t    void Start()",
+                        "\t    {",
+                        "\t        $0",
+                        "\t    }",
+                        "",
+                        "\t    void Update()",
+                        "\t    {",
+                        "\t        // This is updated every frame",
+                        "\t    }",
+                        "",
+                        "\t    void FixedUpdate()",
+                        "\t    {",
+                        "\t        // This is updated when the physics engine updates",
+                        "\t    }",
+                        "\t}",
+                        "}",
+                        ""
+                    ]
+                },
+                {
+                    "label": "Scriptable Object",
+                    "filename": "ScriptableObject",
+                    "description": "A Unity ScriptableObject base class",
+                    "body": [
+                        "using UnityEngine;",
+                        "",
+                        "[CreateAssetMenu(fileName = \"${TM_FILENAME_BASE}\", menuName = \"ScriptableObjects/${TM_FILENAME_BASE}\", order = 1)]",
+                        "",
+                        "public class ${TM_FILENAME_BASE}ScriptableObject : ScriptableObject",
+                        "{",
+                        "    public string prefabName;",
+                        "}",
+                        ""
+                    ]
+                }
+            ]
         }
     ]
 }
