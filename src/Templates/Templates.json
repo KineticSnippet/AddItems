@@ -12,6 +12,7 @@
                     "description": "A blueprint for creating objects.",
                     "filename": "Class",
                     "body": [
+                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public class $TM_FILENAME_BASE",
@@ -25,6 +26,7 @@
                     "description": "Defines a contract for classes to implement.",
                     "filename": "Interface",
                     "body": [
+                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public interface $TM_FILENAME_BASE",
@@ -38,6 +40,7 @@
                     "description": "Represents a set of named constants.",
                     "filename": "Enum",
                     "body": [
+                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public enum $TM_FILENAME_BASE",
@@ -51,6 +54,7 @@
                     "description": "Represents a lightweight object.",
                     "filename": "Struct",
                     "body": [
+                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public struct $TM_FILENAME_BASE",
@@ -64,6 +68,7 @@
                     "description": "A blueprint for creating classes.",
                     "filename": "AbstractClass",
                     "body": [
+                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public abstract class $TM_FILENAME_BASE",
@@ -77,6 +82,8 @@
                     "description": "A blueprint for creating classes.",
                     "filename": "PartialClass",
                     "body": [
+                        "[usings]",
+
                         "namespace [namespace];",
                         "",
                         "public partial class $TM_FILENAME_BASE",
@@ -90,6 +97,7 @@
                     "description": "A blueprint for creating immutable objects.",
                     "filename": "Record",
                     "body": [
+                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public record $TM_FILENAME_BASE",
@@ -158,6 +166,7 @@
                     "filename": "Model",
                     "extensionName": "cshtml.cs",
                     "body": [
+                        "[usings]",
                         "using Microsoft.AspNetCore.Mvc.RazorPages;",
                         "",
                         "namespace [namespace];",
@@ -495,6 +504,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
+                        "[usings]",
                         "",
                         "namespace [namespace]",
                         "{",
@@ -514,6 +524,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
+                        "[usings]",
                         "",
                         "namespace [namespace]",
                         "{",
@@ -533,6 +544,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
+                        "[usings]",
                         "",
                         "namespace [namespace]",
                         "{",
@@ -552,6 +564,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
+                        "[usings]",
                         "",
                         "namespace [namespace]",
                         "{",
@@ -571,6 +584,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
+                        "[usings]",
                         "",
                         "namespace [namespace]",
                         "{",
@@ -590,6 +604,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
+                        "[usings]",
                         "",
                         "namespace [namespace]",
                         "{",

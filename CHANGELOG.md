@@ -2,12 +2,19 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
-## [2.1.0] - 2023-09-05 - In progress
+## [2.1.0] - 2023-09-07
 
 - Adding unity templates (For game development, not the DE)
   - Adding templates
-  - Adding context menu
+  - Adding context menu if needed/requested by someone
 - Minor changes on readme and Contributions.md
+- Fixed: In the previous update, the `package.json` (extension manifest) was updated to match the new license, GPL-v3, however I selected `LGPL-3.0-only`, this was a mistake! The correct license is the [license](/License.md) file in the repo, which is a GPL-v3. Fixed!
+- Updated configurations for `NamespaceNormalization`: Removed a note that were saying it was temporary disabled.
+- Removed some useless lines of code.
+- Updated templates for C#, and C# legacy
+- Added a new configuration option: `C# usings`:
+  - This configuration will allow the user to add more usings, as they please, to almost all c# templates.
+  - A semicolon is automatically added if not provided.
 
 ## [2.0.1] - 2023-09-05
 

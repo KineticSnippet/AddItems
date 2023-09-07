@@ -345,6 +345,11 @@ export class ConfigManager {
                 NormalizationOptions.none
             );
     }
+    get csharpUsings(): string[] {
+        return workspace
+            .getConfiguration(Extension.id)
+            .get(configKeys.csharpUsings, []);
+    }
     /**
      * Sets the value of the `ctxMenuCustoms` configuration property.
      */

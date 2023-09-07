@@ -629,7 +629,15 @@
                             "Remove namespaces",
                             "Replace dots with underscores"
                         ],
-                        "markdownDescription": "Decide what to do with special characters in a namespace. In case you have an invalid folder structure. For example, if you have a folder named `Money$$$`, the dollar signs (`$$$`) are invalid characters for a namespace. This setting will decide what to do with those characters. \n\n**Note**: White spaces will always be removed, regardless of this setting. \n\n**Note**: This setting is temporary disabled. It will be re-enabled in a future release."
+                        "markdownDescription": "Decide what to do with special characters in a namespace. In case you have an invalid folder structure. For example, if you have a folder named `Money$$$`, the dollar signs (`$$$`) are invalid characters for a namespace. This setting will decide what to do with those characters. \n\n**Note**: White spaces will always be removed, regardless of this setting."
+                    },
+                    "add-items.c#.addUsings": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "markdownDescription": "Always add the following usings to the top of the file, for example you can add:\n\n`using System.Text.Json;`\n\n`using System.Text.Json.Serialization;`\n\nAnd those lines will be added to every C# file you create from now on.",
+                        "default": []
                     }
                 }
             }
