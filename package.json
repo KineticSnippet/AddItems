@@ -22,7 +22,7 @@
         "url": "https://twitter.com/kineticSnippet",
         "email": "kineticSnippet@outlook.com"
     },
-    "license": "LGPL-3.0-only",
+    "license": "GPL-3.0",
     "categories": [
         "Programming Languages",
         "Snippets"
@@ -36,11 +36,7 @@
             {
                 "command": "add-items.addItem",
                 "title": "%extension.commands.addItem.title%",
-                "category": "%extension.name%",
-                "icon": {
-                    "light": "./Resources/Icons/Icon.png",
-                    "dark": "./Resources/Icons/Icon.png"
-                }
+                "category": "%extension.name%"
             },
             {
                 "command": "add-items.addItemCustom",
