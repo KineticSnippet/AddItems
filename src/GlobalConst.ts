@@ -15,6 +15,7 @@ export const regex = {
         /^(?!\s*$)[a-zA-Z0-9\s./\\_-]*\.[a-zA-Z0-9\s./\\_-]+(?<!\.)$/, // Validates file names
     multiSepRegex: /(\/{2,}|\\{2,})/gm, // Matches multiple slashes or backslashes
     namespacePattern: /(\[namespace\])/gm, // Matches the [namespace] placeholder
+    usingsPattern: /(\[usings\])/gm,
     // Matches the [sponsor] placeholder
     sponsorPattern: /(\[sponsor\])/gm,
     // Matches all invalid characters in a namespace, except for slashes and backslashes
@@ -58,6 +59,7 @@ export const configEntry = {
     showRazor: `${Extension.id}.showRazor`,
     showTypescript: `${Extension.id}.showTypescript`,
     namespaceNormalizations: `${Extension.id}.namespaceNormalizations`,
+    csharpUsings: `${Extension.id}.c#.addUsings`,
 };
 
 /**
@@ -73,6 +75,7 @@ export const configKeys = {
     ctxMenuPython: "contextMenu.shortcut.Python",
     ctxMenuTypescript: "contextMenu.shortcut.Typescript",
     ctxNamespaceNormalizations: "normalizeNamespaces",
+    csharpUsings: "c#.addUsings",
 };
 
 /**

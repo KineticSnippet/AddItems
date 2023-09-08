@@ -25,25 +25,30 @@ This are the languages this extension provide snippets for:
 You can add more snippets for your favorite language running the command: "Open user templates" and adding your templates.
 Enable this feature in "Settings": "Context menu: Custom" and set it to true.
 
-## C# extension
-
-If you are a C# developer, you may be interested in [this extension](https://github.com/kineticSnippet/DotnetTools)
-
----
-
 ## Localization
 
 This extension is localized in the following languages:
 
 - English (default, built-in)
 - Russian (built-in, partial)
+- Spanish (build-in, partial)
 
-## Credits
+## This extension is available on Open-VSX
 
-Extension icon: [yoteyo](https://www.flaticon.com/authors/yoteyo)
+If you are an open source lover using [vscodium](https://vscodium.com/) you can install this extension [here](https://open-vsx.org/extension/kineticSnippet/add-items).  
+
+This is an open source, GPL-3, project you can modify, share and contribute. Fell free to [contribute](/Contributions.md).
 
 ## Contributions
 
 All contributions are welcome!
 
 Make sure to read the [contributions guidelines](/Contributions.md) before.
+
+## C# extension
+
+If you are a C# developer, you may be interested in [this extension](https://github.com/kineticSnippet/DotnetTools)
+
+## Credits
+
+Extension icon: [yoteyo](https://www.flaticon.com/authors/yoteyo)

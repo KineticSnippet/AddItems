@@ -147,7 +147,7 @@ export class Warehouse {
         const templatesUserExists = Warehouse.fileExists(this.templatesUser);
         if (templatesUserExists) {
             const confirm = await this.askToConfirm(
-                "Do you want to reset user templates file?"
+                "Do you want to reset the user templates file?"
             );
             if (confirm === "Yes") {
                 await vscode.workspace.fs.copy(
@@ -179,7 +179,9 @@ export class Warehouse {
             const tempString = Buffer.from(temp).toString();
             return tempString;
         } else {
-            throw new Error("User templates file does not exist");
+            throw new Error(
+                "User templates file does not exist. Please run the command: `Open user templates` and follow the instructions."
+            );
         }
     }
 }

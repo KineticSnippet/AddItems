@@ -2,7 +2,7 @@
 
 All Contributions are welcome!
 
-If you have an idea that can improve the performance, user experience, expand the limits, or any other general improvements of any kind, or report bugs, or something that isn't working, you can:
+If you have an idea that can improve the performance, user experience, expand the limits, or any other general improvements of any kind, report bugs, or something that isn't working, you can:
 
 ## Submit a issue on github
 

@@ -127,7 +127,7 @@ const jackPrefixes = {
 
 export const fileCreatorPrefixes = {
     infoOk: `>${new Date().toLocaleString()}-[📑] `,
-    infoError: `>${new Date().toLocaleString()}-[ 🔴 🥺] `,
+    infoError: `>${new Date().toLocaleString()}-[🔴 🥺] `,
     infoWarning: `>${new Date().toLocaleString()}-[📑 😯] `,
     infoSuccess: `>${new Date().toLocaleString()}-[📑 💪] `,
 };

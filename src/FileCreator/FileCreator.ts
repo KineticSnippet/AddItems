@@ -5,7 +5,7 @@ import {
     SolicitedFile,
 } from "./FileCreatorHelper";
 import path from "path";
-import { lumberjack, warehouse } from "../extension";
+import { lumberjack } from "../extension";
 import TemplateParser, {
     Language,
     Template,
@@ -61,8 +61,6 @@ export class FileCreator {
             if (item === FileKind.default) {
                 templates = await TemplateParser.getTemplates();
             } else {
-                if (!warehouse) {
-                }
                 templates = await TemplateParser.getTemplatesUser();
             }
             lumberjack.logFileCreatorInfo(`Templates read.`);
