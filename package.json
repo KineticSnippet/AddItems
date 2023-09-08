@@ -549,12 +549,12 @@
         ],
         "configuration": [
             {
-                "title": "Add Items",
+                "title": "%extension.name%",
                 "properties": {
                     "add-items.contextMenu.custom": {
                         "type": "boolean",
                         "default": false,
-                        "description": "Show Custom context menu shortcut, for custom templates"
+                        "description": "%config.contextMenu.custom.description%"
                     },
                     "add-items.contextMenu.shortcut.CSharp": {
                         "type": "string",
@@ -563,13 +563,13 @@
                             "Always",
                             "Dynamic"
                         ],
+                        "description": "%config.contextMenu.shortcut.CSharp.description%",
                         "enumDescriptions": [
-                            "Shortcuts will never be shown",
-                            "Shortcuts will always be shown",
-                            "Shortcuts will be shown based on the current workspace"
+                            "%config.contextMenu.shortcuts.enum.never.desc%",
+                            "%config.contextMenu.shortcuts.enum.always.desc%",
+                            "%config.contextMenu.shortcuts.enum.dynamic.desc%"
                         ],
-                        "default": "Dynamic",
-                        "description": "Decide when to show C# context menu shortcut."
+                        "default": "Dynamic"
                     },
                     "add-items.contextMenu.shortcut.Razor": {
                         "type": "string",
@@ -578,28 +578,28 @@
                             "Always",
                             "Dynamic"
                         ],
-                        "default": "Dynamic",
-                        "description": "Decide when to show C# Razor context menu shortcut.",
+                        "description": "%config.contextMenu.shortcut.Razor.description%",
                         "enumDescriptions": [
-                            "Shortcuts will never be shown",
-                            "Shortcuts will always be shown",
-                            "Shortcuts will be shown based on the current workspace"
-                        ]
+                            "%config.contextMenu.shortcuts.enum.never.desc%",
+                            "%config.contextMenu.shortcuts.enum.always.desc%",
+                            "%config.contextMenu.shortcuts.enum.dynamic.desc%"
+                        ],
+                        "default": "Dynamic"
                     },
                     "add-items.contextMenu.shortcut.Typescript": {
                         "type": "string",
+                        "description": "%config.contextMenu.shortcut.Typescript.description%",
                         "enum": [
                             "Never",
                             "Always",
                             "Dynamic"
                         ],
-                        "default": "Dynamic",
-                        "description": "Decide when to show TypeScript context menu shortcut.",
                         "enumDescriptions": [
-                            "Shortcuts will never be shown",
-                            "Shortcuts will always be shown",
-                            "Shortcuts will be shown based on the current workspace"
-                        ]
+                            "%config.contextMenu.shortcuts.enum.never.desc%",
+                            "%config.contextMenu.shortcuts.enum.always.desc%",
+                            "%config.contextMenu.shortcuts.enum.dynamic.desc%"
+                        ],
+                        "default": "Dynamic"
                     },
                     "add-items.contextMenu.shortcut.Python": {
                         "type": "string",
@@ -609,11 +609,11 @@
                             "Dynamic"
                         ],
                         "default": "Dynamic",
-                        "description": "Decide when to show Python context menu shortcut.",
+                        "description": "%config.contextMenu.shortcut.Python.description%",
                         "enumDescriptions": [
-                            "Shortcuts will never be shown",
-                            "Shortcuts will always be shown",
-                            "Shortcuts will be shown based on the current workspace"
+                            "%config.contextMenu.shortcuts.enum.never.desc%",
+                            "%config.contextMenu.shortcuts.enum.always.desc%",
+                            "%config.contextMenu.shortcuts.enum.dynamic.desc%"
                         ]
                     },
                     "add-items.normalizeNamespaces": {
@@ -625,18 +625,18 @@
                             "Replace with underscore"
                         ],
                         "enumDescriptions": [
-                            "Do not normalize namespaces",
-                            "Remove namespaces",
-                            "Replace dots with underscores"
+                            "%config.contextMenu.shortcuts.enum.none.desc%",
+                            "%config.contextMenu.shortcuts.enum.remove.desc%",
+                            "%config.contextMenu.shortcuts.enum.replace.desc%"
                         ],
-                        "markdownDescription": "Decide what to do with special characters in a namespace. In case you have an invalid folder structure. For example, if you have a folder named `Money$$$`, the dollar signs (`$$$`) are invalid characters for a namespace. This setting will decide what to do with those characters. \n\n**Note**: White spaces will always be removed, regardless of this setting."
+                        "markdownDescription": "%config.normalizeNamespaces.markdownDescription%"
                     },
                     "add-items.c#.addUsings": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "markdownDescription": "Always add the following usings to the top of the file, for example you can add:\n\n`using System.Text.Json;`\n\n`using System.Text.Json.Serialization;`\n\nAnd those lines will be added to every C# file you create from now on.",
+                        "markdownDescription": "%config.CSharp.addUsings.markdownDescription%",
                         "default": []
                     }
                 }
