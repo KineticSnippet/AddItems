@@ -9,5 +9,23 @@
     "ctx.addCSharp": "Добавить элементы C#",
     "ctx.addRazor": "Добавить элементы Razor",
     "ctx.addTypeScript": "Добавить элементы TypeScript",
-    "ctx.addPython": "Добавить элементы Python"
+    "ctx.addPython": "Добавить элементы Python",
+
+    "config.contextMenu.shortcuts.enum.never.desc": "Ярлыки никогда не будут отображаться",
+    "config.contextMenu.shortcuts.enum.always.desc": "Ярлыки всегда будут отображаться",
+    "config.contextMenu.shortcuts.enum.dynamic.desc": "Ярлыки будут отображаться динамически",
+    "config.contextMenu.shortcuts.enum.none.desc": "Не нормализуйте пространства имен",
+    "config.contextMenu.shortcuts.enum.remove.desc": "Удалить специальные символы",
+    "config.contextMenu.shortcuts.enum.replace.desc": "Замените точки на подчеркивания",
+
+    "config.contextMenu.custom.description": "Показать ярлык пользовательского контекстного меню для пользовательских шаблонов",
+
+    "config.contextMenu.shortcut.CSharp.description": "Решите, когда отображать ярлык контекстного меню C#.",
+    "config.contextMenu.shortcut.Razor.description": "Решите, когда отображать ярлык контекстного меню C# Razor.",
+    "config.contextMenu.shortcut.Typescript.description": "Решите, когда показывать ярлык контекстного меню TypeScript.",
+    "config.contextMenu.shortcut.Python.description": "Решите, когда показывать ярлык контекстного меню Python.",
+
+    "config.normalizeNamespaces.markdownDescription": "Решите, что делать со специальными символами в пространстве имен. Если у вас неверная структура папок. Например, если у вас есть папка с именем `Money$$$`, знаки доллара (`$$$`) являются недопустимыми символами для пространства имен. Этот параметр решит, что делать с этими персонажами. \n\n**Примечание**. Пробелы всегда будут удаляться, независимо от этого параметра.",
+
+    "config.CSharp.addUsings.markdownDescription": "Всегда добавляйте следующее «using» в начало файла, например, вы можете добавить:\n\n`using System.Text.Json;`\n\n`using System.Text.Json.Serialization;`\n \nИ с этого момента эти строки будут добавляться в каждый создаваемый вами файл C#."
 }

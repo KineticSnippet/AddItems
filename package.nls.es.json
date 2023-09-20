@@ -9,5 +9,23 @@
     "ctx.addCSharp": "Agregar archivos C#",
     "ctx.addRazor": "Agregar archivos Razor",
     "ctx.addTypeScript": "Agregar archivos TypeScript",
-    "ctx.addPython": "Agregar archivos Python"
+    "ctx.addPython": "Agregar archivos Python",
+
+    "config.contextMenu.shortcuts.enum.never.desc": "Los atajos nunca se mostrarán",
+    "config.contextMenu.shortcuts.enum.always.desc": "Los atajos siempre se mostrarán",
+    "config.contextMenu.shortcuts.enum.dynamic.desc": "Los atajos se mostrarán dinámicamente",
+    "config.contextMenu.shortcuts.enum.none.desc": "No normalizar espacios de nombres",
+    "config.contextMenu.shortcuts.enum.remove.desc": "Eliminar caracteres especiales",
+    "config.contextMenu.shortcuts.enum.replace.desc": "Replace dots with underscores",
+
+    "config.contextMenu.custom.description": "Mostrar acceso directo al menú contextual personalizado, para plantillas personalizadas",
+
+    "config.contextMenu.shortcut.CSharp.description": "Decida cuándo mostrar el acceso directo del menú contextual de C#.",
+    "config.contextMenu.shortcut.Razor.description": "Decida cuándo mostrar el acceso directo del menú contextual de C# Razor.",
+    "config.contextMenu.shortcut.Typescript.description": "Decida cuándo mostrar el acceso directo del menú contextual de TypeScript.",
+    "config.contextMenu.shortcut.Python.description": "Decida cuándo mostrar el acceso directo del menú contextual de Python.",
+
+    "config.normalizeNamespaces.markdownDescription": "Decide qué hacer con los caracteres especiales en un espacio de nombres. En caso de que tenga una estructura de carpetas no válida. Por ejemplo, si tiene una carpeta llamada `Dinero$$$`, los signos de dólar ($$$`) son caracteres no válidos para un espacio de nombres. Esta configuración decidirá qué hacer con esos caracteres. \n\n**Nota**: Los espacios en blanco siempre se eliminarán, independientemente de esta configuración.",
+
+    "config.CSharp.addUsings.markdownDescription": "Siempre agregue el siguiente 'using' al principio del archivo, por ejemplo puede agregar:\n\n`using System.Text.Json;`\n\n`using System.Text.Json.Serialization;`\n \nY esas líneas se agregarán a cada archivo C# que cree a partir de ahora."
 }
