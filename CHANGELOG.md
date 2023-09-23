@@ -2,6 +2,12 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
+## [2.2.0] - 2023-09-22
+
+- Improved localization
+  - Added support for spanish
+  - Settings are now translated for both russian and spanish
+
 ## [2.1.0] - 2023-09-07
 
 - Adding unity templates (For game development, not the DE)
