@@ -9,7 +9,8 @@ import {
 } from "./GlobalConst";
 import { FileKind, SolicitedFile } from "./FileCreator/FileCreatorHelper";
 import FileCreator from "./FileCreator/FileCreator";
-import { lumberjack, warehouse } from "./extension";
+import { configs, lumberjack, warehouse } from "./extension";
+import { Settings } from "./Warehouse/Settings";
 
 /**
  * A class that contains static methods to register all commands used by the extension.
@@ -28,9 +29,9 @@ export class Commands {
                 try {
                     if (clicker === undefined) {
                         lumberjack.logInfo("No solicited file");
-                        FileCreator.createItem(clicker);
+                        await FileCreator.createItem(clicker);
                     } else {
-                        FileCreator.createItem(clicker, solicitedFile);
+                        await FileCreator.createItem(clicker, solicitedFile);
                     }
                 } catch (error) {
                     if (error instanceof Error) {
@@ -102,6 +103,27 @@ export class Commands {
                 warehouse.deleteUserTemplates();
             }
         );
+
+        const resetSettings = commands.registerCommand(
+            EssentialCommandNames.resetSettings,
+            () => {
+                lumberjack.logCommand(EssentialCommandNames.resetSettings);
+                warehouse.writeSettings(new Settings());
+            }
+        );
+
+        const saveSettings = commands.registerCommand(
+            EssentialCommandNames.saveSettings,
+            () => {
+                lumberjack.logCommand(EssentialCommandNames.resetSettings);
+                warehouse.writeSettings(configs);
+            }
+        );
+
+        /**
+         * The following commands create files
+         */
+
         /**
          * Registers a command to create a new C# file.
          * @param clicker The Uri of the file that triggered the command.
@@ -578,6 +600,10 @@ export class Commands {
             openUserTemplatesCmd,
             restoreUserTemplatesCmd,
             deleteUserTemplatesCmd,
+            resetSettings,
+            saveSettings,
+
+            // File creation commands
             addCsAllCmd,
             addCsClassCmd,
             addCsEnumCmd,

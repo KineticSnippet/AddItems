@@ -116,6 +116,8 @@ export enum EssentialCommandNames {
     openUserTemplates = `${Extension.id}.openUserTemplates`,
     restoreUserTemplates = `${Extension.id}.restoreUserTemplates`,
     deleteUserTemplates = `${Extension.id}.deleteUserTemplates`,
+    resetSettings = `${Extension.id}.resetSettings`,
+    saveSettings = `${Extension.id}.saveSettings`,
 }
 
 /**

@@ -59,6 +59,16 @@
                 "category": "%extension.name%"
             },
             {
+                "command": "add-items.resetSettings",
+                "title": "%extension.commands.resetSettings%",
+                "category": "%extension.name%"
+            },
+            {
+                "command": "add-items.saveSettings",
+                "title": "%extension.commands.saveSettings%",
+                "category": "%extension.name%"
+            },
+            {
                 "command": "add-items.showAllCSharp",
                 "title": "Show all"
             },

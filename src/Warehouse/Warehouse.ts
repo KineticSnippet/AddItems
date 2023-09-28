@@ -1,8 +1,10 @@
 import { ExtensionContext } from "vscode";
 import * as fs from "fs";
-import { lumberjack } from "../extension";
+import { configs, lumberjack } from "../extension";
 import * as vscode from "vscode";
 import path from "path";
+import { Rated, Settings } from "./Settings";
+import { config } from "process";
 
 /**
  * The Warehouse class represents a storage facility for templates and other resources used by the newFile extension and stored in the user's global storage folder.
@@ -13,6 +15,11 @@ export class Warehouse {
     templatesEmpty: vscode.Uri;
     templatesValidatorUser: vscode.Uri;
     templatesValidatorOriginal: vscode.Uri;
+
+    // Ex Settings
+
+    settingsPath: vscode.Uri;
+
     constructor(ctx: ExtensionContext) {
         lumberjack.logInfo("Initializing Warehouse");
 
@@ -47,7 +54,9 @@ export class Warehouse {
                 "Templates.schema.json"
             )
         );
-        lumberjack.logInfo("Warehouse initialized");
+        this.settingsPath = vscode.Uri.file(
+            path.join(ctx.globalStorageUri.fsPath, "Settings.json")
+        );
     }
     /**
      * Checks if a file exists at the given URI.
@@ -182,6 +191,47 @@ export class Warehouse {
             throw new Error(
                 "User templates file does not exist. Please run the command: `Open user templates` and follow the instructions."
             );
+        }
+    }
+
+    public async getSettings(): Promise<Settings> {
+        let settingsExists = Warehouse.fileExists(this.settingsPath);
+        if (settingsExists) {
+            lumberjack.logInfo(`Reading config file...`);
+            let content = await vscode.workspace.fs.readFile(this.settingsPath);
+            let settingsAsString = Buffer.from(content).toString();
+            let settings = JSON.parse(settingsAsString);
+            lumberjack.logInfo(`Done...`);
+            return settings as Settings;
+        } else {
+            lumberjack.logInfo(`No previous config found...`);
+            return new Settings();
+        }
+    }
+
+    public async writeSettings(settings: Settings) {
+        lumberjack.logInfo(`Saving config...`);
+        await vscode.workspace.fs.writeFile(
+            this.settingsPath,
+            Buffer.from(JSON.stringify(settings))
+        );
+        lumberjack.logInfo(`Done...`);
+    }
+    public async askToRateExtension() {
+        if (configs.rated === Rated.later) {
+            lumberjack.logInfo("Asking the user to rate the extension");
+            const rate = await vscode.window.showInformationMessage(
+                "Do you have a minute to rate this extension?",
+                "Sure!",
+                "Not now",
+                "Dot ask again"
+            );
+
+            if (rate === "Sure!") {
+                lumberjack.logSuccess("Rating!");
+            } else {
+                lumberjack.logInfo("Not rating:(");
+            }
         }
     }
 }

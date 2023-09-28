@@ -5,6 +5,8 @@
     "extension.commands.openUserTemplates.title": "Open User Templates",
     "extension.commands.restoreUserTemplates.title": "Restore User Templates",
     "extension.commands.deleteUserTemplates.title": "Delete User Templates",
+    "extension.commands.resetSettings": "Reset settings to default",
+    "extension.commands.saveSettings": "Save settings",
 
     "ctx.addCSharp": "Add Items C#",
     "ctx.addRazor": "Add Items Razor",
@@ -27,5 +29,5 @@
 
     "config.normalizeNamespaces.markdownDescription": "Decide what to do with special characters in a namespace. In case you have an invalid folder structure. For example, if you have a folder named `Money$$$`, the dollar signs (`$$$`) are invalid characters for a namespace. This setting will decide what to do with those characters. \n\n**Note**: White spaces will always be removed, regardless of this setting.",
 
-    "config.CSharp.addUsings.markdownDescription" : "Always add the following usings to the top of the file, for example you can add:\n\n`using System.Text.Json;`\n\n`using System.Text.Json.Serialization;`\n\nAnd those lines will be added to every C# file you create from now on."
+    "config.CSharp.addUsings.markdownDescription": "Always add the following usings to the top of the file, for example you can add:\n\n`using System.Text.Json;`\n\n`using System.Text.Json.Serialization;`\n\nAnd those lines will be added to every C# file you create from now on."
 }
