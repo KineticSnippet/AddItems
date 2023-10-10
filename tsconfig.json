@@ -6,7 +6,7 @@
         "lib": ["ES2020"],
         "sourceMap": true,
         "rootDir": "src",
-        "strict": true ,
+        "strict": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
         "noUnusedParameters": true,
@@ -19,6 +19,6 @@
         "noEmitOnError": true,
         "alwaysStrict": true,
         "noImplicitThis": true,
-        "noImplicitOverride": true,
+        "noImplicitOverride": true
     }
 }

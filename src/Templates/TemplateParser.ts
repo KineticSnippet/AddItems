@@ -1,5 +1,6 @@
 import { lumberjack, warehouse } from "../extension";
 import Templates from "./Templates.json";
+
 /**
  * TemplateParser is responsible for parsing and validating templates, both user and default.
  */

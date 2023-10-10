@@ -4,7 +4,6 @@ import { configs, lumberjack } from "../extension";
 import * as vscode from "vscode";
 import path from "path";
 import { Rated, Settings } from "./Settings";
-import { config } from "process";
 
 /**
  * The Warehouse class represents a storage facility for templates and other resources used by the newFile extension and stored in the user's global storage folder.
