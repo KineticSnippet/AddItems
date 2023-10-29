@@ -242,28 +242,21 @@ export class FileCreatorHelper {
     ): SnippetString {
         const bodyString = this.convertStringArrayToString(body);
         let snippetString = this.placeNamespace(bodyString, namespaceString);
-        snippetString = this.placeSponsor(snippetString);
-        snippetString = this.placeUsings(snippetString);
         return new SnippetString(snippetString);
     }
-    static placeUsings(snippetString: string): string {
-        let usings = configMgr.csharpUsings;
-        if (usings.length === 0) {
-            return snippetString.replace(regex.usingsPattern, "");
-        } else {
-            let usingString = "";
-            usings.forEach((us) => {
-                if (!us.endsWith(";")) {
-                    us += ";";
-                }
-                usingString += us + "\n";
-            });
-            snippetString = snippetString.replace(
-                regex.usingsPattern,
-                usingString
-            );
-            return snippetString;
+    static async modifyNamespace(originalNamespace: string): Promise<string> {
+        let namespace = await window.showInputBox({
+            prompt: "Please confirm your namespace",
+            ignoreFocusOut: true,
+            value: originalNamespace,
+            title: "Is this namespace correct?",
+            valueSelection: [0, 0],
+            // title
+        });
+        if (namespace === undefined) {
+            namespace = originalNamespace;
         }
+        return namespace;
     }
     static placeSponsor(snippetString: string): string {
         const sponsor = `\n$LINE_COMMENT This file was created by ${Extension.publisher}.${Extension.id} vscode extension. https://github.com/kineticSnippet/AddItems`;

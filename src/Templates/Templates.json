@@ -12,7 +12,6 @@
                     "description": "A blueprint for creating objects.",
                     "filename": "Class",
                     "body": [
-                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public class $TM_FILENAME_BASE",
@@ -26,7 +25,6 @@
                     "description": "Defines a contract for classes to implement.",
                     "filename": "Interface",
                     "body": [
-                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public interface $TM_FILENAME_BASE",
@@ -40,7 +38,6 @@
                     "description": "Represents a set of named constants.",
                     "filename": "Enum",
                     "body": [
-                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public enum $TM_FILENAME_BASE",
@@ -54,7 +51,6 @@
                     "description": "Represents a lightweight object.",
                     "filename": "Struct",
                     "body": [
-                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public struct $TM_FILENAME_BASE",
@@ -68,7 +64,6 @@
                     "description": "A blueprint for creating classes.",
                     "filename": "AbstractClass",
                     "body": [
-                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public abstract class $TM_FILENAME_BASE",
@@ -82,8 +77,6 @@
                     "description": "A blueprint for creating classes.",
                     "filename": "PartialClass",
                     "body": [
-                        "[usings]",
-
                         "namespace [namespace];",
                         "",
                         "public partial class $TM_FILENAME_BASE",
@@ -97,7 +90,6 @@
                     "description": "A blueprint for creating immutable objects.",
                     "filename": "Record",
                     "body": [
-                        "[usings]",
                         "namespace [namespace];",
                         "",
                         "public record $TM_FILENAME_BASE",
@@ -134,8 +126,7 @@
                         "// global using Xunit;",
                         "// global using System.Diagnostics;",
                         "// global using System.Diagnostics.CodeAnalysis;",
-                        "",
-                        "[sponsor]"
+                        ""
                     ]
                 },
                 {
@@ -166,7 +157,6 @@
                     "filename": "Model",
                     "extensionName": "cshtml.cs",
                     "body": [
-                        "[usings]",
                         "using Microsoft.AspNetCore.Mvc.RazorPages;",
                         "",
                         "namespace [namespace];",
@@ -483,8 +473,7 @@
                         "# torchvision",
                         "# tensorflow",
                         "# keras",
-                        "",
-                        "[sponsor]"
+                        ""
                     ]
                 }
             ]
@@ -504,7 +493,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
-                        "[usings]",
+
                         "",
                         "namespace [namespace]",
                         "{",
@@ -524,7 +513,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
-                        "[usings]",
+
                         "",
                         "namespace [namespace]",
                         "{",
@@ -544,7 +533,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
-                        "[usings]",
+
                         "",
                         "namespace [namespace]",
                         "{",
@@ -564,7 +553,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
-                        "[usings]",
+
                         "",
                         "namespace [namespace]",
                         "{",
@@ -584,7 +573,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
-                        "[usings]",
+
                         "",
                         "namespace [namespace]",
                         "{",
@@ -604,7 +593,7 @@
                         "using System.Collections.Generic;",
                         "using System.Linq;",
                         "using System.Threading.Tasks;",
-                        "[usings]",
+
                         "",
                         "namespace [namespace]",
                         "{",
@@ -752,8 +741,7 @@
                         "\t\t\"noImplicitOverride\": true,",
                         "\t}",
                         "}",
-                        "",
-                        "[sponsor]"
+                        ""
                     ],
                     "siblings": {
                         "languageLabel": "TypeScript",
@@ -809,6 +797,7 @@
             "description": "A Razor Page is an ASP.NET Core MVC view ideal for serving web pages that are a mix of HTML, CSS, and server-side code.",
             "templates": [
                 {
+                    "namespace": false,
                     "label": "Layout",
                     "description": "Razor view layout page",
                     "filename": "_Layout",
@@ -832,13 +821,15 @@
                     "label": "View Start",
                     "description": "Used to set the default layout page for razor views",
                     "filename": "_ViewStart",
-                    "body": ["@{", "\tLayout = \"_Layout\";", "}"]
+                    "body": ["@{", "\tLayout = \"_Layout\";", "}"],
+                    "namespace": false
                 },
                 {
                     "label": "Component",
                     "description": "Razor empty view component",
                     "filename": "Component",
-                    "body": ["<h3>Component</h3>", "", "@code {", "", "}"]
+                    "body": ["<h3>Component</h3>", "", "@code {", "", "}"],
+                    "namespace": false
                 },
                 {
                     "namespace": true,

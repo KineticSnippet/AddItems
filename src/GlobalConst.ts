@@ -75,7 +75,7 @@ export const configKeys = {
     ctxMenuPython: "contextMenu.shortcut.Python",
     ctxMenuTypescript: "contextMenu.shortcut.Typescript",
     ctxNamespaceNormalizations: "normalizeNamespaces",
-    csharpUsings: "c#.addUsings",
+    razorNameSpaceConfirm: "razorNameSpaceConfirm",
 };
 
 /**

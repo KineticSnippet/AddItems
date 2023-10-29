@@ -631,13 +631,10 @@
                         ],
                         "markdownDescription": "%config.normalizeNamespaces.markdownDescription%"
                     },
-                    "add-items.c#.addUsings": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "markdownDescription": "%config.CSharp.addUsings.markdownDescription%",
-                        "default": []
+                    "add-items.razorNameSpaceConfirm": {
+                        "type": "boolean",
+                        "default": false,
+                        "markdownDescription": "%config.razorNameSpaceConfirm.markdownDescription%"
                     }
                 }
             }

@@ -345,10 +345,10 @@ export class ConfigManager {
                 NormalizationOptions.none
             );
     }
-    get csharpUsings(): string[] {
+    get razorNameSpaceConfirm(): boolean {
         return workspace
             .getConfiguration(Extension.id)
-            .get(configKeys.csharpUsings, []);
+            .get(configKeys.razorNameSpaceConfirm, false);
     }
     /**
      * Sets the value of the `ctxMenuCustoms` configuration property.

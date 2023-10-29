@@ -5,7 +5,7 @@ import {
     SolicitedFile,
 } from "./FileCreatorHelper";
 import path from "path";
-import { lumberjack } from "../extension";
+import { configMgr, lumberjack } from "../extension";
 import TemplateParser, {
     Language,
     Template,
@@ -154,13 +154,27 @@ export class FileCreator {
             let nmSpace = "";
             if (
                 (userSelectedLanguage.namespace &&
-                    userSelectedLanguage.namespace) ||
+                    userSelectedTemplate.namespace) ||
                 userSelectedLanguage.namespace !== false
             ) {
                 lumberjack.logFileCreatorInfo(
                     `Namespace is required for this language.`
                 );
                 nmSpace = await FileCreatorHelper.createNamespace(destFolder);
+                if (
+                    userSelectedLanguage.label === "Razor Pages" &&
+                    userSelectedTemplate.namespace !== false
+                ) {
+                    lumberjack.logInfo(
+                        "Checking for namespace confirmation..."
+                    );
+                    let namespaceConfirm = configMgr.razorNameSpaceConfirm;
+                    if (namespaceConfirm === true) {
+                        nmSpace = await FileCreatorHelper.modifyNamespace(
+                            nmSpace
+                        );
+                    }
+                }
                 lumberjack.logFileCreatorInfo(`Namespace: ${nmSpace}`);
             }
             lumberjack.logFileCreatorInfo(`Creating snippet...`);
