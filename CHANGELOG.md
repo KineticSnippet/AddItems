@@ -2,6 +2,10 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
+## [2.2.1] - 2023-11-17
+
+- Username change
+
 ## [2.2.0] - 2023-09-22
 
 - Improved localization
