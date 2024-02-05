@@ -2,6 +2,16 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
+## [2.2.3] - 2024-02-05
+
+- The "AddUsing" feature has been re-named and re-purposed, it now allows to add top-file lines not only to c# files, but any kind of file as many additional lines as the user requires.
+- The normalization feature has been renamed, to better fit in the configuration naming style.
+- Changes were implemented in all three supported languages.
+
+## [2.2.2] - 2024-02-02
+
+- Fixed links to repo
+
 ## [2.2.1] - 2023-11-17
 
 - Username change

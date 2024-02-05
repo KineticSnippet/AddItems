@@ -1,6 +1,6 @@
 import path from "path";
 import { SnippetString, Uri, window, workspace } from "vscode";
-import { Extension, NormalizationOptions, regex } from "../GlobalConst";
+import { NormalizationOptions, regex } from "../GlobalConst";
 import { configMgr, lumberjack } from "../extension";
 import { Language, Template } from "../Templates/TemplateParser";
 import { cancelByUser } from "./FileCreator";
@@ -242,32 +242,25 @@ export class FileCreatorHelper {
     ): SnippetString {
         const bodyString = this.convertStringArrayToString(body);
         let snippetString = this.placeNamespace(bodyString, namespaceString);
-        snippetString = this.placeSponsor(snippetString);
-        snippetString = this.placeUsings(snippetString);
+        snippetString = this.placeAdditionalLines(snippetString);
         return new SnippetString(snippetString);
     }
-    static placeUsings(snippetString: string): string {
-        let usings = configMgr.csharpUsings;
+    /**
+     * Insert additional lines to the top of the file, in case the user specified at least one
+     * @param snippetString the original snippet, as a string.
+     * @returns A modified snippet, with all the requested usings, or top lines
+     */
+    static placeAdditionalLines(snippetString: string): string {
+        let usings = configMgr.csharpUsings; // User usings,
         if (usings.length === 0) {
-            return snippetString.replace(regex.usingsPattern, "");
+            return snippetString;
         } else {
-            let usingString = "";
+            let usingString = ""; // hold all the lines, in the snippet format
             usings.forEach((us) => {
-                if (!us.endsWith(";")) {
-                    us += ";";
-                }
                 usingString += us + "\n";
             });
-            snippetString = snippetString.replace(
-                regex.usingsPattern,
-                usingString
-            );
-            return snippetString;
+            return usingString + snippetString;
         }
-    }
-    static placeSponsor(snippetString: string): string {
-        const sponsor = `\n$LINE_COMMENT This file was created by ${Extension.publisher}.${Extension.id} vscode extension. https://github.com/kineticSnippet/AddItems`;
-        return snippetString.replace(regex.sponsorPattern, sponsor);
     }
     /**
      * Creates a namespace directory string from a given target path.

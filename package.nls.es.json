@@ -18,7 +18,7 @@
     "config.contextMenu.shortcuts.enum.remove.desc": "Eliminar caracteres especiales",
     "config.contextMenu.shortcuts.enum.replace.desc": "Replace dots with underscores",
 
-    "config.contextMenu.custom.description": "Mostrar acceso directo al menú contextual personalizado, para plantillas personalizadas",
+    "config.contextMenu.custom.description": "Mostrar acceso directo al menú contextual personalizado, para plantillas personalizadas\n\n Ejecute el comando `Abrir plantillas del usuario` para crear sus plantillas personalizadas",
 
     "config.contextMenu.shortcut.CSharp.description": "Decida cuándo mostrar el acceso directo del menú contextual de C#.",
     "config.contextMenu.shortcut.Razor.description": "Decida cuándo mostrar el acceso directo del menú contextual de C# Razor.",
@@ -27,5 +27,5 @@
 
     "config.normalizeNamespaces.markdownDescription": "Decide qué hacer con los caracteres especiales en un espacio de nombres. En caso de que tenga una estructura de carpetas no válida. Por ejemplo, si tiene una carpeta llamada `Dinero$$$`, los signos de dólar ($$$`) son caracteres no válidos para un espacio de nombres. Esta configuración decidirá qué hacer con esos caracteres. \n\n**Nota**: Los espacios en blanco siempre se eliminarán, independientemente de esta configuración.",
 
-    "config.CSharp.addUsings.markdownDescription": "Siempre agregue el siguiente 'using' al principio del archivo, por ejemplo puede agregar:\n\n`using System.Text.Json;`\n\n`using System.Text.Json.Serialization;`\n \nY esas líneas se agregarán a cada archivo C# que cree a partir de ahora."
+    "config.file.topOfTheFile": "Siempre agregue las siguientes líneas en la parte superior del archivo, por ejemplo puede agregar:\n\n`using System.Text.Json;`\n\n`from math import exp, expm1;`\n\n Esas líneas ahora se agregará a cualquier archivo creado a partir de ahora."
 }

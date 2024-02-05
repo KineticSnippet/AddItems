@@ -18,7 +18,7 @@
     "config.contextMenu.shortcuts.enum.remove.desc": "Remove special characters",
     "config.contextMenu.shortcuts.enum.replace.desc": "Replace dots with underscores",
 
-    "config.contextMenu.custom.description": "Show Custom context menu shortcut, for custom templates",
+    "config.contextMenu.custom.description": "Show Custom context menu shortcut, for custom templates\n\n Please run the command `Open custom templates` to create your custom templates",
 
     "config.contextMenu.shortcut.CSharp.description": "Decide when to show C# context menu shortcut.",
     "config.contextMenu.shortcut.Razor.description": "Decide when to show C# Razor context menu shortcut.",
@@ -27,5 +27,5 @@
 
     "config.normalizeNamespaces.markdownDescription": "Decide what to do with special characters in a namespace. In case you have an invalid folder structure. For example, if you have a folder named `Money$$$`, the dollar signs (`$$$`) are invalid characters for a namespace. This setting will decide what to do with those characters. \n\n**Note**: White spaces will always be removed, regardless of this setting.",
 
-    "config.CSharp.addUsings.markdownDescription" : "Always add the following usings to the top of the file, for example you can add:\n\n`using System.Text.Json;`\n\n`using System.Text.Json.Serialization;`\n\nAnd those lines will be added to every C# file you create from now on."
+    "config.file.topOfTheFile": "Always add the following lines to the top of the file, for example you can add:\n\n`using System.Text.Json;`\n\n`from math import exp, expm1;`\n\n Those lines will be now added to any file created from now on."
 }

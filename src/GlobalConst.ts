@@ -58,8 +58,8 @@ export const configEntry = {
     showPython: `${Extension.id}.showPython`,
     showRazor: `${Extension.id}.showRazor`,
     showTypescript: `${Extension.id}.showTypescript`,
-    namespaceNormalizations: `${Extension.id}.namespaceNormalizations`,
-    csharpUsings: `${Extension.id}.c#.addUsings`,
+    namespaceNormalizations: `${Extension.id}.namespaces.Normalize`,
+    csharpUsings: `${Extension.id}.file.topOfTheFile`, // Unnecessary, this entry is not used to call the settings. However, it is nice to have here to keep track of all settings
 };
 
 /**
@@ -74,8 +74,8 @@ export const configKeys = {
     ctxMenuRazor: "contextMenu.shortcut.Razor",
     ctxMenuPython: "contextMenu.shortcut.Python",
     ctxMenuTypescript: "contextMenu.shortcut.Typescript",
-    ctxNamespaceNormalizations: "normalizeNamespaces",
-    csharpUsings: "c#.addUsings",
+    ctxNamespaceNormalizations: "namespaces.Normalize",
+    csharpUsings: "file.topOfTheFile",
 };
 
 /**

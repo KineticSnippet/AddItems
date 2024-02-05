@@ -616,7 +616,7 @@
                             "%config.contextMenu.shortcuts.enum.dynamic.desc%"
                         ]
                     },
-                    "add-items.normalizeNamespaces": {
+                    "add-items.namespaces.Normalize": {
                         "type": "string",
                         "default": "None",
                         "enum": [
@@ -631,12 +631,12 @@
                         ],
                         "markdownDescription": "%config.normalizeNamespaces.markdownDescription%"
                     },
-                    "add-items.c#.addUsings": {
+                    "add-items.file.topOfTheFile": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "markdownDescription": "%config.CSharp.addUsings.markdownDescription%",
+                        "markdownDescription": "%config.file.topOfTheFile%",
                         "default": []
                     }
                 }
