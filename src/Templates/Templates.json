@@ -126,8 +126,7 @@
                         "// global using Xunit;",
                         "// global using System.Diagnostics;",
                         "// global using System.Diagnostics.CodeAnalysis;",
-                        "",
-                        "[sponsor]"
+                        ""
                     ]
                 },
                 {
@@ -474,8 +473,7 @@
                         "# torchvision",
                         "# tensorflow",
                         "# keras",
-                        "",
-                        "[sponsor]"
+                        ""
                     ]
                 }
             ]
@@ -736,9 +734,7 @@
                         "\t\t\"noImplicitThis\": true,",
                         "\t\t\"noImplicitOverride\": true,",
                         "\t}",
-                        "}",
-                        "",
-                        "[sponsor]"
+                        "}"
                     ],
                     "siblings": {
                         "languageLabel": "TypeScript",
