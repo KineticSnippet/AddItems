@@ -2,6 +2,10 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
+## [2.2.5] - 2024-02-10
+
+- Fixed [issue 09](https://github.com/theFish2171/AddItems/issues/9)
+
 ## [2.2.3] - 2024-02-05
 
 - The "AddUsing" feature has been re-named and re-purposed, it now allows to add top-file lines not only to c# files, but any kind of file as many additional lines as the user requires.
