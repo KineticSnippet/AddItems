@@ -74,7 +74,7 @@ export class FileCreatorHelper {
                     return a.label.localeCompare(b.label);
                 }),
             {
-                placeHolder: `Please select a language`,
+                placeHolder: `Please select a language, or start typing a language name and press enter.`,
                 ignoreFocusOut: true,
                 canPickMany: false,
                 matchOnDescription: true,
@@ -117,7 +117,7 @@ export class FileCreatorHelper {
                     return a.label.localeCompare(b.label);
                 }),
             {
-                placeHolder: `Please select a template`,
+                placeHolder: `Please select a template, or type a template name and press enter.`,
                 ignoreFocusOut: true,
                 canPickMany: false,
                 matchOnDescription: true,
