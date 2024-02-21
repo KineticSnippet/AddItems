@@ -12,7 +12,7 @@
     "version": "2.2.5",
     "repository": {
         "type": "git",
-        "url": "https://github.com/theFish2171/AddItems"
+        "url": "https://github.com/KineticSnippet/AddItems"
     },
     "engines": {
         "vscode": "^1.80.0"
