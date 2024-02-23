@@ -47,8 +47,13 @@ Make sure to read the [contributions guidelines](/Contributions.md) before.
 
 ## C# extension
 
-If you are a C# developer, you may be interested in [this extension](https://github.com/thefish2171/DotnetTools)
+If you are a C# developer, you may be interested in [this extension](https://github.com/KineticSnippet/DotnetTools)
 
 ## Credits
 
-Extension icon: [yoteyo](https://www.flaticon.com/authors/yoteyo)
+Extension icon: [yoteyo](https://www.flaticon.com/authors/yoteyo)  
+Author: [The Fish](https://github.com/theFish2171)
+
+## Special thanks to
+
+You for using this extension

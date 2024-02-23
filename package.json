@@ -7,7 +7,9 @@
     "keywords": [
         "new file",
         "create file",
-        "create class"
+        "create class",
+        "new file",
+        "new class"
     ],
     "version": "2.2.5",
     "repository": {
@@ -18,7 +20,7 @@
         "vscode": "^1.80.0"
     },
     "author": {
-        "name": "theFish2191",
+        "name": "theFish2171",
         "url": "https://github.com/theFish2171",
         "email": "theFish2171@outlook.com"
     },

@@ -2,13 +2,14 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
-## [2.2.7] - Current buffer
+## [2.2.7] - Repo moved to organization
 
 - Minor change to the user instructions while creating files.
+- Moved the repo from my personal profile to an organization profile, [KineticSnippet](https://github.com/KineticSnippet) to match the publisher.
 
 ## [2.2.5] - 2024-02-10 : Bug fix
 
-- Fixed [issue 09](https://github.com/theFish2171/AddItems/issues/9)
+- Fixed [issue 09](https://github.com/KineticSnippet/AddItems/issues/9)
 
 ## [2.2.3] - 2024-02-05
 
