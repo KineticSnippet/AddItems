@@ -2,6 +2,10 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
+## [2.2.9] - 2024-06-28 : Security update
+
+- Updated dependencies
+
 ## [2.2.7] - Repo moved to organization
 
 - Minor change to the user instructions while creating files.
