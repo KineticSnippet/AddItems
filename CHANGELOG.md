@@ -2,6 +2,15 @@
 
 All notable changes to the `add-items` extension will be documented in this file.
 
+## [2.2.13] - 2024-10-12 : Improved Contributions guidelines
+
+- Added an start up guide
+- Typos fix
+
+## [2.2.11] - 2024-10-26 : Security update
+
+- Updated dependencies
+
 ## [2.2.9] - 2024-06-28 : Security update
 
 - Updated dependencies
